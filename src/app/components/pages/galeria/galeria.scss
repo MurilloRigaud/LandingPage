@@ -1,0 +1,79 @@
+.galeria{
+  text-align: center;
+  padding-top: 40px;
+  min-height: 100vh;
+  padding-bottom: clamp(32px, 5vw, 80px);
+}
+h1{
+  font-size: 3.5em;
+  padding-bottom: 25px;
+}
+p{
+  font-size: 1.1em;
+}
+.carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.carrossel-slide {
+  width: min(700px, 90vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 0, 0, 0.733);
+  }
+}
+
+.legenda {
+  margin-top: 12px;
+  font-size: 1.15em;
+  color: white;
+}
+
+.seta {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 0, 0, 0.733);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.733);
+    transform: scale(1.1);
+  }
+}
+
+.pontos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ponto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  &.ativo {
+    background-color: rgba(255, 0, 0, 0.733);
+    transform: scale(1.2);
+  }
+}

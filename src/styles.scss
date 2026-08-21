@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
 *{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+
+}
+h1,h3{
+  font-family: 'Madimi One', sans-serif;
+  color: white;
+
+}
+p{
+  font-family: 'Manuale', sans-serif;
+  color: white;
+  font-size: 1.1em;
 }
 a{
   text-decoration: none;
@@ -16,7 +29,9 @@ a:hover{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 main {
   flex: 1;
 }
+

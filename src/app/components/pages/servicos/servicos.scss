@@ -1,23 +1,23 @@
 .Servicos{
-  background-color:#000000;
   text-align: center;
-  color: rgb(255, 255, 255);
-  line-height: 70px;
-  padding-top: 20px;
+  padding-top: 40px;
+  min-height: 100vh;
+  padding-bottom: clamp(32px, 5vw, 80px);
 
 }
 h1{
   font-size: 3.5em;
+  padding-bottom: 25px;
 }
 p{
   font-size: 1.1em;
 }
 .container{
   display: grid;
-  grid-template: 200px 200px /350px 350px;
+  grid-template: 240px 240px /350px 350px;
   gap: 50px;
   justify-content: center;
-  padding-top: 15px;
+  padding-top: 50px;
 
 }
 .cards{
@@ -31,6 +31,7 @@ p{
 
 .cards > p{
   line-height: 20px;
+  font-size: 0.9em;
 }
 .cards > a{
   font-weight: bold;
@@ -44,4 +45,38 @@ p{
   transform: translateY(-5px);
   border: solid 1px red;
 
+}
+#caixa1{
+  line-height: 45px;
+}
+#caixa1 > img {
+  background-color: rgba(255, 0, 0, 0.12),;
+  border-radius: 15px;
+  padding: 3px;
+}
+#caixa2{
+  line-height: 45px;
+}
+#caixa2 > img {
+  background-color: rgba(255, 0, 0, 0.12),;
+  border-radius: 15px;
+  padding: 3px;
+}
+
+#caixa3{
+  line-height: 45px;
+}
+#caixa3 > img {
+  background-color: rgba(255, 0, 0, 0.12),;
+  border-radius: 15px;
+  padding: 3px;
+  padding-right: 15px;
+}
+#caixa4{
+  line-height: 45px;
+}
+#caixa4 > img {
+  background-color: rgba(255, 0, 0, 0.12),;
+  border-radius: 15px;
+  padding: 3px;
 }

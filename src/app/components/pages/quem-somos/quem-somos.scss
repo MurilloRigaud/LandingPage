@@ -1,0 +1,23 @@
+.quemsomos{
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding-top: 40px;
+  min-height: 100vh;
+  padding-bottom: clamp(32px, 5vw, 80px)
+}
+h1{
+  font-size: 3.5em;
+  padding-bottom: 25px;
+  text-align: center;
+}
+p{
+  padding-left: 100px;
+  line-height: 28px;
+}
+#texto > img{
+  padding-top: 40px;
+  display: flex;
+  padding-left: 170px;
+  border-radius: 10px;
+}
