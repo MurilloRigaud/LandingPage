@@ -1,0 +1,47 @@
+.Servicos{
+  background-color:#000000;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  line-height: 70px;
+  padding-top: 20px;
+
+}
+h1{
+  font-size: 3.5em;
+}
+p{
+  font-size: 1.1em;
+}
+.container{
+  display: grid;
+  grid-template: 200px 200px /350px 350px;
+  gap: 50px;
+  justify-content: center;
+  padding-top: 15px;
+
+}
+.cards{
+  background-color: #222222;
+  border-radius: 15px;
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.cards > p{
+  line-height: 20px;
+}
+.cards > a{
+  font-weight: bold;
+}
+.cards:hover{
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.12),
+    rgba(255, 0, 0, 0)
+  );
+  transform: translateY(-5px);
+  border: solid 1px red;
+
+}
