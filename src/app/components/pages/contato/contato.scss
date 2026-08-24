@@ -1,0 +1,128 @@
+.contato {
+  text-align: center;
+  padding-top: 40px;
+  min-height: 100vh;
+  padding-bottom: clamp(32px, 5vw, 80px);
+}
+
+h1 {
+  font-size: 3.5em;
+  padding-bottom: 25px;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.contato-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  text-align: left;
+  align-items: start;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lista-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contato-card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(6px);
+    background-color: #222;
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95em;
+    margin: 0;
+  }
+
+  &.sem-link {
+    cursor: default;
+
+    &:hover {
+      transform: none;
+      background-color: #1a1a1a;
+    }
+  }
+}
+
+.icone {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    color: rgba(255, 0, 0, 0.9);
+  }
+}
+
+.localizacao {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: white;
+    font-size: 1.6em;
+    margin-bottom: 18px;
+  }
+
+  .endereco {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+
+  .link-mapa {
+    align-self: flex-start;
+    color: rgba(255, 0, 0, 0.733);
+    font-weight: bold;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.mapa {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 0, 0, 0.733);
+}

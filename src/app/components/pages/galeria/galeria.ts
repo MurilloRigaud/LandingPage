@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
-  interface FotoGaleria {
+import { Component, signal } from '@angular/core';
+
+interface FotoGaleria {
   src: string;
   legenda: string;
-  }
+}
+
 @Component({
   selector: 'app-galeria',
   imports: [],
@@ -10,25 +12,36 @@ import { Component } from '@angular/core';
   styleUrl: './galeria.scss',
 })
 export class Galeria {
-
   fotos: FotoGaleria[] = [
-    { src: '/Faixada.jpeg', legenda: 'Legenda aqui' },
-    { src: '/Pelicula.jpeg', legenda: 'Legenda aqui' },
-    { src: '/Plotagem.jpeg', legenda: 'Legenda aqui' },
-    { src: '/Som.jpeg',  legenda: 'Legenda aqui' },
+    { src: '/Faixada.jpeg', legenda: 'Aplicação de película nano cerâmica' },
+    { src: '/Pelicula.jpeg', legenda: 'Aplicação de película de nano cerâmica transparente' },
+    { src: '/Plotagem.jpeg', legenda: 'Plotagem com material PPF' },
+    { src: '/Som.jpeg', legenda: 'Som interno de carro' },
   ];
-  indiceAtual = 0;
+
+   indiceAtual = signal(0);
+  transicionando = signal(false);
+
+  private trocarSlide(novoIndice: number): void {
+    this.transicionando.set(true);
+
+    setTimeout(() => {
+      this.indiceAtual.set(novoIndice);
+      this.transicionando.set(false);
+    }, 300);
+  }
 
   proximaFoto(): void {
-    this.indiceAtual = (this.indiceAtual + 1) % this.fotos.length;
+    const novo = (this.indiceAtual() + 1) % this.fotos.length;
+    this.trocarSlide(novo);
   }
 
   fotoAnterior(): void {
-    this.indiceAtual =
-      (this.indiceAtual - 1 + this.fotos.length) % this.fotos.length;
+    const novo = (this.indiceAtual() - 1 + this.fotos.length) % this.fotos.length;
+    this.trocarSlide(novo);
   }
 
   irParaFoto(index: number): void {
-    this.indiceAtual = index;
+    this.trocarSlide(index);
   }
 }
