@@ -1,23 +1,38 @@
+h1{
+  font-size: 3.5em;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
 .quemsomos{
-  display: flex;
-  justify-content: center;
+
   color: rgb(255, 255, 255);
   padding-top: 40px;
   min-height: 100vh;
-  padding-bottom: clamp(32px, 5vw, 80px)
-}
-h1{
-  font-size: 3.5em;
-  padding-bottom: 25px;
-  text-align: center;
-}
-p{
-  padding-left: 100px;
-  line-height: 28px;
-}
-#texto > img{
-  padding-top: 40px;
+  padding-bottom: clamp(32px, 5vw, 80px);
   display: flex;
-  padding-left: 170px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#texto {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+
+ h1{
+  text-align: left;
+  font-size: 3.2em;
+ }
+ p{
+  line-height: 25px;
+
+ }
+
+}
+
+img{
+  padding-top: 80px;
   border-radius: 10px;
 }

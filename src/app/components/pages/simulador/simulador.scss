@@ -1,0 +1,59 @@
+h1{
+  font-size: 2.0em;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.container-pai{
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-bottom: clamp(32px, 5vw, 80px)
+
+}
+.Texto{
+  
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+
+  p{
+    padding-left: 15px;
+    line-height: 26px;
+  }
+  h1{
+    font-size: 3.9em;
+  }
+}
+
+.container-opcoes{
+  border: solid 1px gray;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(110, 107, 107, 0.87);
+  
+}
+.container-veiculos{
+  display: grid;
+  grid-template: 100px / 200px 200px;
+  gap: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px
+  
+ 
+}
+
+.cards{
+  background-color: rgb(7, 7, 7);
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px gray solid;
+  text-align: center;
+  
+}
+.cards:hover{
+  border: solid 1px red;
+}
+
+

@@ -14,7 +14,7 @@ p{
 }
 .container{
   display: grid;
-  grid-template: 240px 240px /350px 350px;
+  grid-template: 240px 240px /350px 350px 350px;
   gap: 50px;
   justify-content: center;
   padding-top: 50px;
@@ -79,4 +79,19 @@ p{
   background-color: rgba(255, 0, 0, 0.12),;
   border-radius: 15px;
   padding: 3px;
+}
+
+#caixa4{
+  line-height: 45px;
+
+}
+#caixa5{
+  line-height: 45px;
+}
+#caixa5 > img {
+  background-color: rgba(255, 0, 0, 0.12),;
+  border-radius: 15px;
+  padding: 3px;
+  padding-bottom: 7px;
+  
 }
