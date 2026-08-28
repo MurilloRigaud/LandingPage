@@ -1,59 +1,82 @@
-<h1>Vizualizador</h1>
-
 <div class="container-pai">
-  
+
   <div class="Texto">
     <h1>Visualize <br>Seu <span style="color: red;">Estilo</span></h1>
      <p>Escolha seu veículo, serviço e acabamento e veja uma demonstração de como diferentes opções podem transformar o visual</p>
-  
+
     </div>
-  
+
     <div class="container-opcoes">
        <h3><span style="color: rgb(255, 255, 255); background-color: red; padding: 7px; border-radius: 40px; ">1</span> - Escolha seu veiculo</h3>
-      
+
        <div class="container-veiculos">
         <nav class="cards" id="carro">
           <img src="icone-carro.png" alt="carro">
           <h3>Carro</h3>
         </nav>
-        
+
         <nav class="cards" id="carro">
           <img src="icone-moto.png" alt="moto">
           <h3>Moto</h3>
         </nav>
-      
+
       </div>
-       
+       <h3><span style="color: rgb(255, 255, 255); background-color: red; padding: 7px; border-radius: 40px; ">2</span>- Escolha o serviço</h3>
       <div class="container-serviço">
-        <h3>2- Escolha o serviço</h3>
+
         <nav class="cards" id="pelicula">
+          <img src="car-glass.png" alt="">
           <h3>Pelicula</h3>
         </nav>
-        <nav class="cards" id="ppf">
-          <h3>PPF</h3>
-        </nav>
+        
          <nav class="cards" id="plotagem">
+          <img src="icone-pincel.png" alt="pincel">
           <h3>Plotagem</h3>
         </nav>
        </div>
-       <div class="container-tipos">
-          <h3>3-Escolha o tipo de película</h3>
-          <nav class="cores" id="g5">
-            <p>preto</p>
-          </nav>
-          <nav class="cores" id="g20">
-            <p>cinza escuro</p>
-          </nav>
-          <nav class="cores" id="g35">
-            <p>cinza claro</p>
-          </nav>
-          <nav class="cores" id="transparente">
-            <p>nano ceramica</p>
-          </nav>
-       </div>
+      
+       <h3>3-Escolha o tipo de película</h3>
+       
+      <div class="container-tipos">
+
+  <mat-button-toggle-group
+    [(value)]="peliculaSelecionada"
+    aria-label="Escolha o tipo de película">
+
+    <mat-button-toggle value="AG5">
+      <div class="opcao-pelicula">
+        <div class="icone-pelicula preto"></div>
+        <span>G5</span>
+      </div>
+    </mat-button-toggle>
+
+    <mat-button-toggle value="AG20">
+      <div class="opcao-pelicula">
+        <div class="icone-pelicula cinza"></div>
+        <span>G20</span>
+      </div>
+    </mat-button-toggle>
+
+    <mat-button-toggle value="AG30">
+      <div class="opcao-pelicula">
+        <div class="icone-pelicula cinza-claro"></div>
+        <span>G30</span>
+      </div>
+    </mat-button-toggle>
+
+    <mat-button-toggle value="AG50">
+      <div class="opcao-pelicula">
+        <div class="icone-pelicula transparente"></div>
+        <span style="color: white;">G50</span>
+      </div>
+    </mat-button-toggle>
+
+  </mat-button-toggle-group>
+
+</div>
     </div>
-  
-  
+
+
 </div>
 
 
