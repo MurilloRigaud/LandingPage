@@ -1,82 +1,189 @@
 <div class="container-pai">
 
+  <!-- =====================================
+       TEXTO
+  ====================================== -->
+
   <div class="Texto">
-    <h1>Visualize <br>Seu <span style="color: red;">Estilo</span></h1>
-     <p>Escolha seu veículo, serviço e acabamento e veja uma demonstração de como diferentes opções podem transformar o visual</p>
+    <h1>
+      Visualize <br />
+      Seu <span>Estilo</span>
+    </h1>
 
+    <p>
+      Escolha o serviço, a cor do seu carro e o acabamento
+      e veja uma demonstração de como diferentes opções
+      podem transformar o visual.
+    </p>
+  </div>
+
+  <!-- =====================================
+       CONFIGURAÇÕES
+  ====================================== -->
+
+  <div class="container-opcoes">
+
+    <!-- ===================================
+         ETAPA 1
+         SERVIÇO
+    ==================================== -->
+
+    <h3 class="titulo-etapa">
+      <span>1</span>
+      Escolha o serviço
+    </h3>
+
+    <div class="container-servico">
+      <button
+        class="cards"
+        [class.selecionado]="servicoSelecionado() === 'pelicula'"
+        (click)="selecionarServico('pelicula')"
+      >
+        <img src="/car-glass.png" alt="Película" />
+        <h3>Película</h3>
+      </button>
+
+      <button
+        class="cards"
+        [class.selecionado]="servicoSelecionado() === 'plotagem'"
+        (click)="selecionarServico('plotagem')"
+      >
+        <img src="/icone-pincel.png" alt="Plotagem" />
+        <h3>Plotagem</h3>
+      </button>
     </div>
 
-    <div class="container-opcoes">
-       <h3><span style="color: rgb(255, 255, 255); background-color: red; padding: 7px; border-radius: 40px; ">1</span> - Escolha seu veiculo</h3>
+    <!-- ===================================
+         ETAPA 2
+         COR DO CARRO
+         (aparece pros dois serviços)
+    ==================================== -->
 
-       <div class="container-veiculos">
-        <nav class="cards" id="carro">
-          <img src="icone-carro.png" alt="carro">
-          <h3>Carro</h3>
-        </nav>
+    @if (servicoSelecionado()) {
+      <h3 class="titulo-etapa">
+        <span>2</span>
+        Escolha a cor do seu carro
+      </h3>
 
-        <nav class="cards" id="carro">
-          <img src="icone-moto.png" alt="moto">
-          <h3>Moto</h3>
-        </nav>
+      <div class="container-cor">
+        <div class="chroma-wrapper">
+          <input
+            type="color"
+            [value]="corCarro()"
+            (input)="alterarCor($event)"
+            aria-label="Escolha a cor do carro"
+          />
+        </div>
 
+        <div class="cor-info">
+          <strong>Cor selecionada</strong>
+          <span>{{ corCarro() }}</span>
+        </div>
       </div>
-       <h3><span style="color: rgb(255, 255, 255); background-color: red; padding: 7px; border-radius: 40px; ">2</span>- Escolha o serviço</h3>
-      <div class="container-serviço">
+    }
 
-        <nav class="cards" id="pelicula">
-          <img src="car-glass.png" alt="">
-          <h3>Pelicula</h3>
-        </nav>
-        
-         <nav class="cards" id="plotagem">
-          <img src="icone-pincel.png" alt="pincel">
-          <h3>Plotagem</h3>
-        </nav>
-       </div>
-      
-       <h3>3-Escolha o tipo de película</h3>
-       
+    <!-- ===================================
+         ETAPA 3
+         TIPO DE PELÍCULA
+         (só aparece se o serviço for película)
+    ==================================== -->
+
+    @if (servicoSelecionado() === 'pelicula') {
+      <h3 class="titulo-etapa">
+        <span>3</span>
+        Escolha o tipo de película
+      </h3>
+
       <div class="container-tipos">
-
-  <mat-button-toggle-group
-    [(value)]="peliculaSelecionada"
-    aria-label="Escolha o tipo de película">
-
-    <mat-button-toggle value="AG5">
-      <div class="opcao-pelicula">
-        <div class="icone-pelicula preto"></div>
-        <span>G5</span>
+        <mat-button-toggle-group
+          [value]="peliculaSelecionada()"
+          (change)="selecionarPelicula($event.value)"
+          aria-label="Escolha o tipo de película"
+        >
+          @for (pelicula of peliculas; track pelicula.codigo) {
+            <mat-button-toggle [value]="pelicula.codigo">
+              <div class="opcao-pelicula">
+                <div
+                  class="icone-pelicula"
+                  [style.background]="pelicula.cor"
+                  [style.opacity]="pelicula.opacidade"
+                ></div>
+                <span>{{ pelicula.nome }}</span>
+              </div>
+            </mat-button-toggle>
+          }
+        </mat-button-toggle-group>
       </div>
-    </mat-button-toggle>
+    }
 
-    <mat-button-toggle value="AG20">
-      <div class="opcao-pelicula">
-        <div class="icone-pelicula cinza"></div>
-        <span>G20</span>
-      </div>
-    </mat-button-toggle>
+  </div>
 
-    <mat-button-toggle value="AG30">
-      <div class="opcao-pelicula">
-        <div class="icone-pelicula cinza-claro"></div>
-        <span>G30</span>
-      </div>
-    </mat-button-toggle>
+  <!-- =====================================
+       VISUALIZADOR
+  ====================================== -->
 
-    <mat-button-toggle value="AG50">
-      <div class="opcao-pelicula">
-        <div class="icone-pelicula transparente"></div>
-        <span style="color: white;">G50</span>
-      </div>
-    </mat-button-toggle>
+  <div class="visualizador">
 
-  </mat-button-toggle-group>
-
-</div>
+    <div class="visualizador-header">
+      <span>VISUALIZAÇÃO</span>
+      @if (servicoSelecionado()) {
+        <span class="status">● AO VIVO</span>
+      }
     </div>
 
+    <div class="area-veiculo">
+
+      <!-- CARROCERIA (sempre que um serviço estiver escolhido) -->
+
+      @if (servicoSelecionado()) {
+        <canvas #canvasCarroceria class="veiculo-base"></canvas>
+      }
+
+      <!-- CAMADA DO VIDRO (só na película) -->
+
+      @if (servicoSelecionado() === 'pelicula' && peliculaAtual) {
+        <div
+          class="camada-vidro"
+          [style.background]="peliculaAtual.cor"
+          [style.opacity]="peliculaAtual.opacidade"
+          [style.mask-image]="'url(' + imagemMascaraVidro + ')'"
+          [style.-webkit-mask-image]="'url(' + imagemMascaraVidro + ')'"
+        ></div>
+      }
+
+      <!-- MENSAGEM INICIAL -->
+
+      @if (!servicoSelecionado()) {
+        <div class="mensagem-visualizador">
+          <span>🚗</span>
+          <p>Escolha um serviço para começar</p>
+        </div>
+      }
+
+    </div>
+
+    <!-- =================================
+         RODAPÉ DO VISUALIZADOR
+    ================================== -->
+
+    <div class="visualizador-footer">
+      @if (!servicoSelecionado()) {
+        <span>Selecione um serviço para visualizar</span>
+      }
+
+      @if (servicoSelecionado() === 'plotagem') {
+        <span>Plotagem personalizada — {{ corCarro() }}</span>
+      }
+
+      @if (servicoSelecionado() === 'pelicula' && !peliculaSelecionada()) {
+        <span>Escolha o tipo de película</span>
+      }
+
+      @if (servicoSelecionado() === 'pelicula' && peliculaSelecionada()) {
+        <span>Película {{ peliculaAtual?.nome }}</span>
+      }
+    </div>
+
+  </div>
 
 </div>
-
-
