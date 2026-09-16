@@ -112,7 +112,7 @@ h1 {
 
 .sessao-2 {
   display: grid;
-  grid-template: auto / 250px 250px 250px 250px;
+  grid-template: auto / repeat(auto-fit, 250px);;
   padding-top: 30px;
   gap: 15px;
   justify-content: center;

@@ -1,3 +1,5 @@
+import { Plotagem } from "./plotagem/plotagem";
+
 export const SERVICOS = {
 
   acessorios:{
@@ -216,28 +218,99 @@ export const SERVICOS = {
 
     itens: [
       {
-        titulo: 'G5',
-        descricao: 'Extremamente escura',
-        imagem: '/PeliculaG5.jpg'
+        titulo: 'Localização em tempo real',
+        descricao: 'Veja a posição do seu veiculo no mapa, a qualquer momento',
+        imagem: '/CelularGps.jpg'
       },
       {
-        titulo: 'G20',
-        descricao: 'Escura, com bastante privacidade',
-        imagem: '/PeliculaG20.jpg'
+        titulo: 'Alerta de movimento',
+        descricao: 'Receba notificações em casos de movimentações suspeitas',
+        imagem: '/PessoaSuspeita.jpg'
       },
       {
-        titulo: 'G35',
-        descricao: 'Equilíbrio entre visibilidade e privacidade',
-        imagem: '/PeliculaG35.png'
-      },
-      {
-        titulo: 'G50',
-        descricao: 'Mais clara, mantendo proteção e conforto',
-        imagem: '/PeliculaG50.png'
+        titulo: 'Para carros e motos',
+        descricao: 'Proteção completa para todos os tipos de veiculos',
+        imagem: '/Veiculos.png'
       }
     ]
 
+ },
 
-  }
-  }
+ plotagem:{
+
+
+    categoria: 'Plotagem',
+
+    titulo: 'Estilo e proteção',
+
+    tituloDestaque: 'para seu veículo',
+
+    subtitulo:
+      'Mais controle, mais tranquilidade, em todos os momentos',
+
+      descricao:
+      'Os rastreadores veiculares permitem que você acompanhe seu carro ou moto em tempo real, com tecnologia de ponta e alta precisão. Ideal para quem busca mais segurança e praticidade no dia a dia',
+
+      destaques: [
+      'Localização em tempo real',
+      'Monitoramento 24h',
+      'Maior segurança contra roubos e furtos',
+      'Tecnologia de rastreamento avançada',
+      'Instalação especializada'
+    ],
+
+    imagemHeader: '/CarroPlotagem.jpg',
+
+    cardIntroducao: {
+      titulo: 'POR QUE ESCOLHER?',
+      subtitulo: 'Tecnologia que te coloca no controle.'
+    },
+
+    opcoes: [
+      {
+        icone: 'beenhere',
+        titulo: 'Mais segurança',
+        descricao: 'Evite roubos e recupere seu veiculo com mais agilidade.'
+      },
+      {
+        icone: 'location_on',
+        titulo: 'Monitoramento 24h',
+        descricao: 'Acompanhe em tempo real, de onde estiver, pelo celular ou computador.'
+      },
+      {
+        icone: 'save_clock',
+        titulo: 'Praticidade',
+        descricao: 'Tenha todas as informações na palma da sua mão de forma simples e rápida.'
+      },
+      {
+        icone: 'headphones',
+        titulo: 'Suporte Especializado',
+        descricao: 'Nossa equipe está sempre disponpivel para te atender e tirar suas dúvidas.'
+      }
+    ],
+    titulo1: 'NOSSOS RASTREADORES EM AÇÃO',
+    titulo2: 'Tecnologia que te coloca no controle',
+
+    itens: [
+      {
+        titulo: 'Localização em tempo real',
+        descricao: 'Veja a posição do seu veiculo no mapa, a qualquer momento',
+        imagem: '/CelularGps.jpg'
+      },
+      {
+        titulo: 'Alerta de movimento',
+        descricao: 'Receba notificações em casos de movimentações suspeitas',
+        imagem: '/PessoaSuspeita.jpg'
+      },
+      {
+        titulo: 'Para carros e motos',
+        descricao: 'Proteção completa para todos os tipos de veiculos',
+        imagem: '/Veiculos.png'
+      }
+    ]
+
+ },
+
+ }
+  
 
