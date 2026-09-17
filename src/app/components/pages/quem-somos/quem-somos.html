@@ -1,15 +1,43 @@
-<h1>Quem somos</h1>
-<div class="quemsomos">
+<div class="container">
+  <div class="header">
+    <div class="texto">
+      <p><span class="material-symbols-outlined icone-minimizar"> minimize</span>Quem somos</p>
+      <h1>
+        Mais que uma loja,<span style="color: red"> <br />somos apaixonados por carros</span>
+      </h1>
+      <p>
+        A Tico Film é uma empresa especializada em películas automotivas, acessórios e estética
+        veicular, com 10 anos de experiência em Vitória da Conquista. Somos formados por uma equipe
+        que ama o universo automotivo e trabalha todos os dias para entregar qualidade, segurança e
+        satisfação aos nossos clientes. Desde o início da nossa história, nosso principal objetivo
+        sempre foi oferecer produtos de qualidade, serviços bem executados e um atendimento próximo
+        e transparente. Acreditamos que cada veículo merece atenção aos detalhes e que um bom
+        serviço vai muito além da instalação: é preciso entender a necessidade de cada cliente e
+        oferecer a solução mais adequada.
+      </p>
+      <p>
+        Trabalhamos com produtos de alta qualidade, marcas reconhecidas no mercado e contamos com
+        profissionais experients, prontos para entregar o melhor resultado para o seu veiculo.
+      </p>
+      <p></p>
+      <p>
+        <span class="material-symbols-outlined icone-minimizar"> minimize</span>Tico Film -
+        Proteção, tecnologia e estilo para o seu veiculo.
+      </p>
+    </div>
 
-  <div id="texto">
-
-    <h1 style="color: white;">Paixão por carros, <br><span style="color: red;">Compromisso por você</span> </h1>
-    <p>Na Tico Film, somos apaixonados pelo universo automotivo e comprometidos  em oferecer produtos  e serviços que unem qualidade, tecnologia e segurança.  Trabalhamos a 9 anos com a instalação  de películas automotivas e residenciais, acessórios para veículos, sistemas de rastreamento  veicular, plotagem e som automotivo, sempre utilizando produtos de alta qualidade e mão de obra especializada.
-    Nosso compromisso é proporcionar a melhor experiência aos nossos clientes,  oferecendo  atendimento personalizado, preços justos e soluções que valorizam, protegem e tornam cada  veículo ainda mais completo.
-    Mais do que vender produtos,  buscamos construir relacionamentos baseados na confiança, transparência e excelência  em cada serviço realizado. <br> Tico Film — Proteção, tecnologia e estilo para o seu veículo.</p>
-</div>
-
-<div id="Imagem"><img src="Imagem quem-somos.jpg" alt="quem-somos">
-</div>
-
+    <div class="imagem-header">
+      <div class="carrossel-frame">
+        <div class="carrossel">
+          <img
+            *ngFor="let imagem of imagens; let i = index"
+            [src]="imagem"
+            alt="Multimidia"
+            class="slide"
+            [class.ativo]="i === indiceAtual"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

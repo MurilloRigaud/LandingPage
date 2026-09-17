@@ -1,33 +1,25 @@
 .avaliacoes {
-
-  text-align: center;
-
-  padding-top: 40px;
-
-  min-height: 100vh;
-
-  padding-bottom: clamp(32px, 5vw, 80px);
-
+padding-top: 40px;
+padding-bottom: clamp(32px, 5vw, 80px);
 }
-
-h1 {
-
-  font-size: 3.5em;
-
-  padding-bottom: 25px;
-
+.header{
+text-indent:10px;
+h1{
+  font-size: 1.5em;
+  padding-bottom: 15px;
 }
-
-p {
-
+p{
   font-size: 1.1em;
-
-  line-height: 25px;
-
+  text-indent: 20px;
 }
-
+.material-symbols-outlined.icone-minimizar {
+  vertical-align: top;
+  color: red;
+  position: relative;
+  bottom: 6px;
+}
+}
 .container {
-
   display: grid;
 
   grid-template: auto 240px / 350px 350px;
@@ -37,11 +29,9 @@ p {
   justify-content: center;
 
   padding-top: 50px;
-
 }
 
 .cards {
-
   background-color: #222222;
 
   border-radius: 15px;
@@ -53,34 +43,23 @@ p {
   box-sizing: border-box;
 
   transition: 0.3s ease;
-
 }
 
 .cards > p {
-
   line-height: 20px;
 
   font-size: 0.9em;
-
 }
 
 .cards > a {
-
   font-weight: bold;
-
 }
 
 .cards:hover {
-
   transform: translateY(-5px);
-
 }
 
-
-/* PERFIL DA AVALIAÇÃO */
-
 .perfil {
-
   display: flex;
 
   align-items: center;
@@ -88,11 +67,9 @@ p {
   gap: 12px;
 
   margin-bottom: 15px;
-
 }
 
 .avatar {
-
   width: 45px;
 
   height: 45px;
@@ -110,18 +87,13 @@ p {
   border-radius: 50%;
 
   font-size: 22px;
-
 }
 
 .perfil strong {
-
   font-size: 1em;
   color: white;
-
 }
 
 .perfil div:last-child {
-
   font-size: 0.85em;
-
 }

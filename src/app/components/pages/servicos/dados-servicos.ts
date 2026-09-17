@@ -1,5 +1,3 @@
-import { Plotagem } from "./plotagem/plotagem";
-
 export const SERVICOS = {
 
   acessorios:{
@@ -164,11 +162,11 @@ export const SERVICOS = {
 
    rastreadores:{
 
-    categoria: 'RASTREADORES VEICULARES',
+    categoria: 'Tico Film',
 
-    titulo: 'Segurança e tecnologia',
+    titulo: 'Rastreadores',
 
-    tituloDestaque: 'para seu veículo',
+    tituloDestaque: 'Veiculares',
 
     subtitulo:
       'Mais controle, mais tranquilidade, em todos os momentos',
@@ -228,7 +226,7 @@ export const SERVICOS = {
         imagem: '/PessoaSuspeita.jpg'
       },
       {
-        titulo: 'Para carros e motos',
+        titulo: 'Veiculos',
         descricao: 'Proteção completa para todos os tipos de veiculos',
         imagem: '/Veiculos.png'
       }
@@ -239,78 +237,78 @@ export const SERVICOS = {
  plotagem:{
 
 
-    categoria: 'Plotagem',
+    categoria: 'Tico Film',
 
-    titulo: 'Estilo e proteção',
+    titulo: 'Plotagem',
 
-    tituloDestaque: 'para seu veículo',
+    tituloDestaque: 'Automotiva',
 
     subtitulo:
-      'Mais controle, mais tranquilidade, em todos os momentos',
+      'Mais estilo, proteção, e personalidade para o seu carro',
 
       descricao:
-      'Os rastreadores veiculares permitem que você acompanhe seu carro ou moto em tempo real, com tecnologia de ponta e alta precisão. Ideal para quem busca mais segurança e praticidade no dia a dia',
+      'A plotagem automotiva é a escolha perfeita para quem deseja renovar o visual do veiculo com sofisticação e segurança. Utilizamos materiais de alta performance e técnicas avançadas para garantir um estilo um resultado impecável e duradouro',
 
       destaques: [
-      'Localização em tempo real',
-      'Monitoramento 24h',
-      'Maior segurança contra roubos e furtos',
-      'Tecnologia de rastreamento avançada',
-      'Instalação especializada'
+      'Personalização Exclusiva',
+      'Proteção de pintura original',
+      'Acabamento profissional',
+      'Materiais de alta qualidade',
+      'Aplicação especializada'
     ],
 
     imagemHeader: '/CarroPlotagem.jpg',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
-      subtitulo: 'Tecnologia que te coloca no controle.'
+      subtitulo: 'Seu carro com uma nova identidade.'
     },
 
     opcoes: [
       {
+        icone: 'star',
+        titulo: 'Visual exclusivo',
+        descricao: 'Design personalizado que destaca seu estilo único.'
+      },
+      {
         icone: 'beenhere',
-        titulo: 'Mais segurança',
-        descricao: 'Evite roubos e recupere seu veiculo com mais agilidade.'
+        titulo: 'Proteção da pintura',
+        descricao: 'Preserva a pintura original contra riscos e imtempéries.'
       },
       {
-        icone: 'location_on',
-        titulo: 'Monitoramento 24h',
-        descricao: 'Acompanhe em tempo real, de onde estiver, pelo celular ou computador.'
+        icone: 'diamond',
+        titulo: 'Acabamento impecável',
+        descricao: 'Aplicação precisa e acabamento profissional de alto padrão.'
       },
       {
-        icone: 'save_clock',
-        titulo: 'Praticidade',
-        descricao: 'Tenha todas as informações na palma da sua mão de forma simples e rápida.'
-      },
-      {
-        icone: 'headphones',
-        titulo: 'Suporte Especializado',
-        descricao: 'Nossa equipe está sempre disponpivel para te atender e tirar suas dúvidas.'
+        icone: 'timer',
+        titulo: 'Alta durabilidade',
+        descricao: 'Materiais premium que garantem proteção e estilo por muito mais tempo.'
       }
     ],
-    titulo1: 'NOSSOS RASTREADORES EM AÇÃO',
-    titulo2: 'Tecnologia que te coloca no controle',
+    titulo1: 'NOSSOS SERVIÇOS EM DESTAQUE',
+    titulo2: 'Possibilidades para transformar seu veiculo',
 
     itens: [
       {
-        titulo: 'Localização em tempo real',
-        descricao: 'Veja a posição do seu veiculo no mapa, a qualquer momento',
-        imagem: '/CelularGps.jpg'
+        titulo: 'Envelopamento completo',
+        descricao: 'Envelopamento completo do seu veiculo',
+        imagem: '/EnvelopamentoCompleto.png'
       },
       {
-        titulo: 'Alerta de movimento',
-        descricao: 'Receba notificações em casos de movimentações suspeitas',
-        imagem: '/PessoaSuspeita.jpg'
+        titulo: 'Detalhes Personalizados',
+        descricao: 'Envelopamento de peças individuais do seu veiculo',
+        imagem: '/EnvelopamentoPeca.png'
       },
       {
-        titulo: 'Para carros e motos',
-        descricao: 'Proteção completa para todos os tipos de veiculos',
-        imagem: '/Veiculos.png'
+        titulo: 'Diferentes materiais',
+        descricao: 'Vários tipos de cores e materias para utilizar',
+        imagem: '/Paletas.png'
       }
     ]
 
  },
 
  }
-  
+
 

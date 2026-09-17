@@ -1,22 +1,30 @@
 .Servicos{
-  text-align: center;
   padding-top: 40px;
-  min-height: 100vh;
-  padding-bottom: clamp(32px, 5vw, 80px);
-
 }
+.header{
+  text-indent:10px;
 h1{
-  font-size: 3.5em;
-  padding-bottom: 25px;
+  font-size: 1.5em;
+  padding-bottom: 15px;
 }
 p{
   font-size: 1.1em;
+  text-indent: 20px;
 }
+.material-symbols-outlined.icone-minimizar {
+  vertical-align: top;
+  color: red;
+  position: relative;
+  bottom: 6px;
+}
+}
+
 .container{
   display: grid;
-  grid-template: 240px 240px /350px 350px 350px;
-  gap: 50px;
+  grid-template: auto /300px 300px 300px 300px;
+  gap: 30px;
   justify-content: center;
+  align-content: end;
   padding-top: 50px;
 
 }
@@ -93,5 +101,5 @@ p{
   border-radius: 15px;
   padding: 3px;
   padding-bottom: 7px;
-  
+
 }

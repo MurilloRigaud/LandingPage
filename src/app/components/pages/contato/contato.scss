@@ -1,19 +1,26 @@
 .contato {
-  text-align: center;
   padding-top: 40px;
   min-height: 100vh;
   padding-bottom: clamp(32px, 5vw, 80px);
 }
 
-h1 {
-  font-size: 3.5em;
-  padding-bottom: 25px;
+.header{
+  text-indent:10px;
+h1{
+  font-size: 1.5em;
+  padding-bottom: 15px;
 }
-
-p {
+p{
   font-size: 1.1em;
+  text-indent: 20px;
 }
-
+.material-symbols-outlined.icone-minimizar {
+  vertical-align: top;
+  color: red;
+  position: relative;
+  bottom: 6px;
+}
+}
 .contato-layout {
   display: grid;
   grid-template-columns: minmax(280px, 380px) 1fr;
