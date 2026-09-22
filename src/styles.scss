@@ -66,3 +66,45 @@ a:hover {
 main {
   flex: 1;
 }
+.whatsapp-flutuante {
+  position: fixed;
+
+  right: 25px;
+  bottom: 20px;
+
+  width: 62px;
+  height: 62px;
+
+  background-color: #25D366;
+
+  border: 3px solid #000;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.3s ease;
+
+  img{
+    height: 40px;
+    width: 40px;
+    padding-top: 2px;
+  }
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.12);
+
+  box-shadow:
+    0 0 20px rgba(37, 211, 102, 0.6);
+}
+

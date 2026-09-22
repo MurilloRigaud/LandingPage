@@ -3,7 +3,7 @@
     <div class="texto">
       <h3><a routerLink="/servicos"> ⬅ Voltar para serviços</a></h3>
       <p>
-        <span class="material-symbols-outlined icone-minimizar"> minimize</span
+        <span class="material-symbols-outlined icone-minimizar" translate="no"> minimize</span
         >{{ servico.categoria }}
       </p>
       <h1>
@@ -19,7 +19,7 @@
       <section>
         @for (item of servico.destaques; track item) {
           <p>
-            <span class="material-symbols-outlined"> check_circle </span>
+            <span class="material-symbols-outlined" translate="no"> check_circle </span>
 
             {{ item }}
           </p>
@@ -33,7 +33,7 @@
   <div class="sessao-1">
     <nav class="cards" id="caixa-introducao">
       <p>
-        <span class="material-symbols-outlined icone-minimizar"> minimize</span>{{ servico.cardIntroducao.titulo }}
+        <span class="material-symbols-outlined icone-minimizar" translate="no"> minimize</span>{{ servico.cardIntroducao.titulo }}
       </p>
       <h2>{{ servico.cardIntroducao.subtitulo }} <br /></h2>
     </nav>
@@ -41,7 +41,7 @@
     @for (opcao of servico.opcoes; track opcao.titulo) {
     <nav class="cards">
 
-        <span class="material-symbols-outlined"> {{opcao.icone}} </span>
+        <span class="material-symbols-outlined" translate="no"> {{opcao.icone}} </span>
 
         <h3>{{ opcao.titulo }}</h3>
 
@@ -52,7 +52,7 @@
   </div>
 
   <div class="introducao">
-    <p><span class="material-symbols-outlined icone-minimizar"> minimize</span>{{servico.titulo1}}</p>
+    <p><span class="material-symbols-outlined icone-minimizar" translate="no"> minimize</span>{{servico.titulo1}}</p>
     <h2>{{ servico.titulo2 }}</h2>
   </div>
 

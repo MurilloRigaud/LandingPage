@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px rgb(160, 160, 160);
+  border-bottom: solid 2px rgb(255, 0, 0);
 
 img{
   width: 130px;
@@ -13,6 +13,15 @@ img{
   margin-left: 50px;
 }
 
+}
+
+.Icone{
+  display: flex;
+}
+.texto{
+  width: 300px;
+  padding: 10px;
+  line-height: 30px;
 }
 nav{
   display: flex;
