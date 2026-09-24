@@ -2,6 +2,7 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
   @include mat.theme(
     (
       color: (
@@ -17,12 +18,19 @@ html {
 body {
 
   color-scheme: light;
-  background-color: var(--mat-sys-surface);
+  background-color: #000;
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 
   margin: 0;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
@@ -66,6 +74,15 @@ a:hover {
 main {
   flex: 1;
 }
+
+/* Home: não força a página inteira a ter 100vh de altura,
+   pra o footer ficar colado logo após o carrossel, sem vão nem antes nem depois dele */
+.app:has(.hero) {
+  min-height: auto;
+}
+main:has(.hero) {
+  flex: 0 0 auto;
+}
 .whatsapp-flutuante {
   position: fixed;
 
@@ -107,4 +124,3 @@ main {
   box-shadow:
     0 0 20px rgba(37, 211, 102, 0.6);
 }
-

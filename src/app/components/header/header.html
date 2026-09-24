@@ -5,15 +5,27 @@
       <h1>Tico Film <br>Loja Automotiva</h1>
     </div>
   </div>
-  <nav>
-    <a routerLink="/servicos">Serviços</a>
+  <button
+    class="menu-toggle"
+    [class.aberto]="menuAberto()"
+    (click)="alternarMenu()"
+    [attr.aria-expanded]="menuAberto()"
+    aria-label="Abrir menu"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <a routerLink="/quem-somos">Quem Somos</a>
+  <nav [class.aberto]="menuAberto()">
+    <a routerLink="/servicos" (click)="fecharMenu()">Serviços</a>
 
-    <a routerLink="/simulador">Visualizador</a>
+    <a routerLink="/quem-somos" (click)="fecharMenu()">Quem Somos</a>
 
-    <a routerLink="/avaliacoes">Avaliações</a>
+    <a routerLink="/simulador" (click)="fecharMenu()">Visualizador</a>
 
-    <a routerLink="/contato">Contato</a>
+    <a routerLink="/avaliacoes" (click)="fecharMenu()">Avaliações</a>
+
+    <a routerLink="/contato" (click)="fecharMenu()">Contato</a>
   </nav>
 </div>

@@ -1,24 +1,24 @@
 .container {
   padding-top: 20px;
-
 }
+
 h1 {
-  font-size: 3.4em;
-  line-height: 55px;
+  font-size: clamp(1.8em, 6vw, 3.4em);
+  line-height: 1.15;
   padding-bottom: 15px;
 }
 
 .header {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-bottom: 20px;
-
 }
 
 .texto {
-  width: 80%;
-  line-height: 30px;
+  width: 100%;
+  line-height: 1.6;
   padding: 20px;
-  line-height: 35px;
 
   h3 {
     padding-bottom: 15px;
@@ -30,31 +30,30 @@ h1 {
 }
 
 .imagem-header {
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-   background: linear-gradient(
+  padding: 16px;
+  background: linear-gradient(
     135deg,
     rgba(20, 0, 0, 0.021),
     rgba(34, 1, 1, 0)
   );
   border-radius: 20px;
-  position: relative; // não precisa mais do ::after aqui
+  position: relative;
 }
 
 .carrossel-frame {
   position: relative;
-  width: 98%;
+  width: 100%;
   max-width: 640px;
-  height: 420px; // defina o tamanho do carrossel aqui
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-// a camada escura por cima das imagens, agora só dentro do frame
 .carrossel-frame::after {
   content: '';
   position: absolute;
@@ -88,4 +87,30 @@ h1 {
 
 .material-symbols-outlined.icone-minimizar {
   color: red;
+}
+
+/* ===================================
+   TABLET / DESKTOP
+=================================== */
+@media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .texto {
+    width: 80%;
+    line-height: 35px;
+  }
+
+  .imagem-header {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .carrossel-frame {
+    width: 98%;
+    aspect-ratio: auto;
+    height: 420px;
+  }
 }

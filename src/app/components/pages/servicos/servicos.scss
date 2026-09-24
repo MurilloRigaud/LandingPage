@@ -1,8 +1,11 @@
 .Servicos{
   padding-top: 40px;
+  padding-bottom: clamp(32px, 5vw, 80px);
 }
 .header{
   text-indent:10px;
+  text-indent:10px;
+  padding: 0 20px; 
 h1{
   font-size: 1.5em;
   padding-bottom: 15px;
@@ -21,13 +24,27 @@ p{
 
 .container{
   display: grid;
-  grid-template: auto /300px 300px 300px 300px;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   justify-content: center;
   align-content: end;
-  padding-top: 50px;
-
+  padding: 40px 20px 0;
 }
+
+@media (min-width: 620px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    padding-top: 50px;
+  }
+}
+
+ @media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 300px); 
+  }
+}
+  
+
 .cards{
   background-color: #222222;
   border-radius: 15px;

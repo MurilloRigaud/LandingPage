@@ -4,20 +4,22 @@
   padding-bottom: clamp(32px, 5vw, 80px);
 }
 h1 {
-  font-size: 3.4em;
-  line-height: 55px;
+  font-size: clamp(1.8em, 6vw, 3.4em);
+  line-height: 1.15;
 }
 
 .header {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   outline: 1px solid rgba(128, 128, 128, 0.205);
   outline-offset: 20px;
   margin-bottom: 20px;
 }
 
 .texto {
-  width: 80%;
-  line-height: 30px;
+  width: 100%;
+  line-height: 1.6;
   padding: 20px;
 
   h3 {
@@ -26,6 +28,18 @@ h1 {
   }
   p {
     padding: 5px;
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .texto {
+    width: 80%;
+    line-height: 30px;
   }
 }
 .imagem-header {
@@ -64,9 +78,14 @@ h1 {
 }
 .sessao-1 {
   display: grid;
-  grid-template: auto/ auto auto auto auto auto;
+  grid-template-columns: 1fr;
   border-bottom: 1px solid rgba(128, 128, 128, 0.205);
+}
 
+@media (min-width: 700px) {
+  .sessao-1 {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
 }
 
 #caixa-introducao {
@@ -77,7 +96,7 @@ h1 {
   }
 }
 .cards {
-  border-right: solid 1px gray;
+  border-bottom: solid 1px gray;
   line-height: 25px;
   padding: 10px;
 
@@ -96,6 +115,17 @@ h1 {
     padding-top: 10px;
   }
 }
+
+@media (min-width: 700px) {
+  .cards {
+    border-bottom: none;
+    border-right: solid 1px gray;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
 .introducao {
   padding: 10px;
   line-height: 35px;
@@ -112,8 +142,8 @@ h1 {
 
 .sessao-2 {
   display: grid;
-  grid-template: auto / repeat(auto-fit, 250px);;
-  padding-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
+  padding: 30px 16px 0;
   gap: 15px;
   justify-content: center;
 }
