@@ -99,6 +99,7 @@
           [value]="peliculaSelecionada()"
           (change)="selecionarPelicula($event.value)"
           aria-label="Escolha o tipo de película"
+          [hideSingleSelectionIndicator]="true"
         >
           @for (pelicula of peliculas; track pelicula.codigo) {
             <mat-button-toggle [value]="pelicula.codigo">

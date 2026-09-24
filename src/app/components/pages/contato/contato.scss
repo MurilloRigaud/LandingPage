@@ -35,7 +35,12 @@ p{
     grid-template-columns: 1fr;
   }
 }
-
+.header{
+  p{
+    text-indent: 1px;
+    padding-left: 15px;
+  }
+}
 .lista-contatos {
   display: flex;
   flex-direction: column;

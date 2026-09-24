@@ -14,23 +14,23 @@ export class Home implements OnDestroy, OnInit {
   private intervalId?: ReturnType<typeof setInterval>;
 
   slides = [
+  {
+    image: '/BannerPelicula.png',
+    mobileImage: '/BannerPelicula-mobile.png',
+    alt: 'Aplicação de películas automotivas'
+  },
+  {
+    image: '/BannerRastreadores.png',
+    mobileImage: '/BannerRastreadores-mobile.png',
+    alt: 'Instalação de rastreadores veiculares'
+  },
+  {
+    image: '/BannerPlotagem.png',
+    mobileImage: '/BannerPlotagem-mobile.png',
+    alt: 'Plotagem e aplicação de PPF'
+  }
+];
 
-    {
-      image: '/BannerPelicula.png',
-      alt: 'Aplicação de películas automotivas'
-    },
-
-    {
-      image: '/BannerRastreadores.png',
-      alt: 'Instalação de rastreadores veiculares'
-    },
-
-    {
-      image: '/BannerPlotagem.png',
-      alt: 'Plotagem e aplicação de PPF'
-    }
-
-  ];
 
    ngOnInit(): void {
     this.startCarrossel();

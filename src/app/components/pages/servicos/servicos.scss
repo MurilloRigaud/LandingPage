@@ -3,16 +3,15 @@
   padding-bottom: clamp(32px, 5vw, 80px);
 }
 .header{
-  text-indent:10px;
-  text-indent:10px;
-  padding: 0 20px; 
+  text-indent:1px;
+  padding: 0 20px;
 h1{
   font-size: 1.5em;
   padding-bottom: 15px;
 }
 p{
   font-size: 1.1em;
-  text-indent: 20px;
+  padding-left: 5px;
 }
 .material-symbols-outlined.icone-minimizar {
   vertical-align: top;
@@ -40,10 +39,10 @@ p{
 
  @media (min-width: 1024px) {
   .container {
-    grid-template-columns: repeat(4, 300px); 
+    grid-template-columns: repeat(4, 300px);
   }
 }
-  
+
 
 .cards{
   background-color: #222222;

@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 
 html {
-  height: 100%;
   overflow-x: hidden;
   @include mat.theme(
     (
@@ -23,7 +22,6 @@ body {
   font: var(--mat-sys-body-medium);
 
   margin: 0;
-  height: 100%;
   width: 100%;
   overflow-x: hidden;
 }
@@ -67,27 +65,22 @@ a:hover {
 
 .app {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background-color: black;
 }
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Home: não força a página inteira a ter 100vh de altura,
-   pra o footer ficar colado logo após o carrossel, sem vão nem antes nem depois dele */
-.app:has(.hero) {
-  min-height: auto;
-}
-main:has(.hero) {
-  flex: 0 0 auto;
-}
 .whatsapp-flutuante {
   position: fixed;
 
-  right: 25px;
-  bottom: 20px;
+  right: 15px;
+  bottom: 60px;
 
   width: 62px;
   height: 62px;

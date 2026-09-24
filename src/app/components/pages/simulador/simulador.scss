@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-/* =====================================
-   TEXTO
-===================================== */
-
 .Texto {
   padding-top: 40px;
 }
@@ -35,10 +31,6 @@
   font-size: 16px;
 }
 
-/* =====================================
-   PAINEL DE OPÇÕES
-===================================== */
-
 .container-opcoes {
   padding: 25px;
   border: 1px solid #333;
@@ -46,10 +38,6 @@
   background: #0b0b0b;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
 }
-
-/* =====================================
-   TÍTULOS DAS ETAPAS
-===================================== */
 
 .titulo-etapa {
   display: flex;
@@ -71,10 +59,6 @@
   color: #fff;
   font-size: 14px;
 }
-
-/* =====================================
-   CARDS
-===================================== */
 
 .cards {
   width: 100%;
@@ -110,21 +94,12 @@
   margin: 5px 0 0;
   font-size: 14px;
 }
-
-/* =====================================
-   SERVIÇO
-===================================== */
-
 .container-servico {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-bottom: 25px;
 }
-
-/* =====================================
-   PELÍCULAS
-===================================== */
 
 .container-tipos {
   display: flex;
@@ -134,15 +109,25 @@
 
 mat-button-toggle-group {
   display: flex;
-  gap: 12px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: clamp(4px, 2vw, 12px);
+  width: 100%;
   border: none !important;
   background: transparent !important;
 }
 
 mat-button-toggle {
+  flex: 1 1 0;
+  min-width: 0;
   border: none !important;
   background: transparent !important;
   color: #fff !important;
+}
+
+mat-button-toggle-group ::ng-deep .mat-button-toggle-label-content {
+  padding: 0 !important;
+  line-height: normal !important;
 }
 
 .opcao-pelicula {
@@ -153,8 +138,8 @@ mat-button-toggle {
 }
 
 .icone-pelicula {
-  width: 45px;
-  height: 45px;
+  width: clamp(34px, 11vw, 45px);
+  height: clamp(34px, 11vw, 45px);
   border-radius: 50%;
   border: 2px solid #555;
   box-sizing: border-box;
@@ -174,11 +159,6 @@ mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
   color: #fff;
   font-size: 13px;
 }
-
-/* =====================================
-   CHROMA KEY (cor do carro)
-===================================== */
-
 .container-cor {
   display: flex;
   align-items: center;
@@ -226,11 +206,6 @@ mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
   font-size: 13px;
   text-transform: uppercase;
 }
-
-/* =====================================
-   VISUALIZADOR
-===================================== */
-
 .visualizador {
   position: relative;
   min-height: 500px;
@@ -240,10 +215,6 @@ mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
   border: 1px solid #292929;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
-
-/* =====================================
-   CABEÇALHO
-===================================== */
 
 .visualizador-header {
   position: absolute;
@@ -263,10 +234,6 @@ mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
   color: #e50914;
 }
 
-/* =====================================
-   ÁREA DO VEÍCULO
-===================================== */
-
 .area-veiculo {
   position: relative;
   width: 100%;
@@ -277,10 +244,6 @@ mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
   justify-content: center;
   overflow: hidden;
 }
-
-/* =====================================
-   IMAGEM / CANVAS DO VEÍCULO
-===================================== */
 
 .veiculo-base {
   position: absolute;
@@ -298,10 +261,6 @@ mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
 canvas.veiculo-base {
   pointer-events: none;
 }
-
-/* =====================================
-   CAMADA DO VIDRO (película)
-===================================== */
 
 .camada-vidro {
   position: absolute;
@@ -324,10 +283,6 @@ canvas.veiculo-base {
   -webkit-mask-size: contain;
 }
 
-/* =====================================
-   MENSAGEM
-===================================== */
-
 .mensagem-visualizador {
   position: relative;
   z-index: 10;
@@ -343,10 +298,6 @@ canvas.veiculo-base {
   margin-top: 10px;
 }
 
-/* =====================================
-   RODAPÉ
-===================================== */
-
 .visualizador-footer {
   position: absolute;
   left: 0;
@@ -359,10 +310,6 @@ canvas.veiculo-base {
   color: #aaa;
   font-size: 13px;
 }
-
-/* =====================================
-   RESPONSIVO
-===================================== */
 
 @media (max-width: 1200px) {
   .container-pai {

@@ -1,12 +1,21 @@
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 .hero {
+  flex: 1;
   width: 100%;
   background-color: #000;
+  display: flex;
+  align-items: center;
 }
 
 .carrossel {
   position: relative;
   width: 100%;
-  aspect-ratio: 20 / 9;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background-color: #000;
 }
@@ -19,7 +28,6 @@
   height: 100%;
 
   opacity: 0;
-
   transition: opacity 1s ease-in-out;
 }
 
@@ -30,16 +38,11 @@
 .slide img {
   width: 100%;
   height: 100%;
-
   display: block;
 
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
-
-/* =========================
-   BOTÕES
-========================= */
 
 .carrossel-btn {
   position: absolute;
@@ -72,9 +75,7 @@
 
 .carrossel-btn:hover {
   background: #e50914;
-
   border-color: #e50914;
-
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -85,11 +86,6 @@
 .next {
   right: 25px;
 }
-
-
-/* =========================
-   INDICADORES
-========================= */
 
 .indicators {
   position: absolute;
@@ -126,27 +122,41 @@
   background: #e50914;
 }
 
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
 @media (max-width: 768px) {
+  :host {
+    min-height: calc(100dvh - 134px);
+  }
 
+  .slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   .hero {
-    height: auto;
-    min-height: auto;
+    align-items: stretch;
   }
 
   .carrossel {
-    height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
+    min-height: 320px;
   }
+  .slide::before {
+  content: '';
+  position: absolute;
+  inset: -30px; 
+  background: var(--bg) center / cover no-repeat;
+  filter: blur(25px) brightness(0.55);
+}
+
+  .slide img {
+  position: relative;
+  object-fit: contain;
+  object-position: center;
+}
 
   .carrossel-btn {
     width: 40px;
     height: 40px;
-
     font-size: 18px;
   }
 
@@ -161,19 +171,13 @@
   .indicators {
     bottom: 15px;
   }
-
 }
 
 @media (max-width: 480px) {
 
-  .carrossel {
-    aspect-ratio: 16 / 10;
-  }
-
   .carrossel-btn {
     width: 34px;
     height: 34px;
-
     font-size: 16px;
   }
 
@@ -184,5 +188,4 @@
   .indicators button.active {
     width: 40px;
   }
-
 }

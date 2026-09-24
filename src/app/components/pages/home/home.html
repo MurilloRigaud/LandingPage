@@ -1,55 +1,33 @@
 <section class="hero">
-
   <div class="carrossel">
 
-    <!-- Slides -->
     @for (slide of slides; track slide.image; let i = $index) {
-
-      <div
-        class="slide"
-        [class.active]="i === currentSlide()"
-      >
-
-        <img
-          [src]="slide.image"
-          [alt]="slide.alt"
-        >
-
+      <div class="slide" [class.active]="i === currentSlide()"[style.--bg]="'url(' + slide.mobileImage + ')'">
+        <picture>
+          <source media="(max-width: 768px)" [srcset]="slide.mobileImage" />
+          <img [src]="slide.image" [alt]="slide.alt" />
+        </picture>
       </div>
     }
 
-    <!-- Botão anterior -->
-    <button
-      class="carrossel-btn prev"
-      (click)="previousSlide()"
-      aria-label="Imagem anterior"
-    >
+
+    <button class="carrossel-btn prev" (click)="previousSlide()" aria-label="Imagem anterior">
       &#10094;
     </button>
 
-    <!-- Botão próximo -->
-    <button
-      class="carrossel-btn next"
-      (click)="nextSlide()"
-      aria-label="Próxima imagem"
-    >
+
+    <button class="carrossel-btn next" (click)="nextSlide()" aria-label="Próxima imagem">
       &#10095;
     </button>
 
-    <!-- Indicadores -->
     <div class="indicators">
-
       @for (slide of slides; track slide.image; let i = $index) {
-
         <button
           [class.active]="i === currentSlide()"
           (click)="goToSlide(i)"
           [attr.aria-label]="'Ir para o slide ' + (i + 1)"
         ></button>
       }
-
     </div>
-
   </div>
-
 </section>
