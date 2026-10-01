@@ -1,11 +1,5 @@
 .container {
-  padding-top: 20px;
-}
-
-h1 {
-  font-size: clamp(1.8em, 6vw, 3.4em);
-  line-height: 1.15;
-  padding-bottom: 15px;
+  padding-top: 12px;
 }
 
 .header {
@@ -20,12 +14,22 @@ h1 {
   line-height: 1.6;
   padding: 20px;
 
+  h1 {
+  font-size: clamp(1.8em, 6vw, 3.4em);
+  line-height: 1.15;
+  padding-bottom: 15px;
+  padding-left: 5px;
+}
+
   h3 {
     padding-bottom: 15px;
     cursor: pointer;
   }
   p {
     padding: 5px;
+  }
+  #titulo{
+    padding-bottom: 12px;
   }
 }
 
@@ -89,9 +93,6 @@ h1 {
   color: red;
 }
 
-/* ===================================
-   TABLET / DESKTOP
-=================================== */
 @media (min-width: 900px) {
   .header {
     flex-direction: row;
@@ -101,6 +102,10 @@ h1 {
   .texto {
     width: 80%;
     line-height: 35px;
+
+    h1{
+      padding-left: 10px;
+    }
   }
 
   .imagem-header {
@@ -113,4 +118,7 @@ h1 {
     aspect-ratio: auto;
     height: 420px;
   }
+
 }
+
+

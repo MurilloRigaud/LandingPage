@@ -1,8 +1,7 @@
 @use '@angular/material' as mat;
 
 html {
-  overflow-x: hidden;
-  @include mat.theme(
+@include mat.theme(
     (
       color: (
         primary: mat.$azure-palette,
@@ -23,7 +22,7 @@ body {
 
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -60,7 +59,7 @@ a {
 a:hover {
   color: red;
   border-color: red;
-  padding-bottom: 7px;
+
 }
 
 .app {
@@ -79,16 +78,18 @@ main {
 .whatsapp-flutuante {
   position: fixed;
 
-  right: 15px;
-  bottom: 60px;
+  right: 16px;
+  bottom: 20px;
 
   width: 62px;
   height: 62px;
 
+  padding: 0;
+  margin: 0;
+
   background-color: #25D366;
 
   border: 3px solid #000;
-
   border-radius: 50%;
 
   display: flex;
@@ -97,23 +98,49 @@ main {
 
   text-decoration: none;
 
-  z-index: 9999;
+  z-index: 99999;
 
-  box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
-  img{
-    height: 40px;
-    width: 40px;
-    padding-top: 2px;
-  }
+.whatsapp-flutuante img {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .whatsapp-flutuante:hover {
   transform: scale(1.12);
 
-  box-shadow:
-    0 0 20px rgba(37, 211, 102, 0.6);
+  border-color: #000;
+
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 700px) {
+
+  .whatsapp-flutuante {
+    width: 56px;
+    height: 56px;
+
+    right: 14px;
+
+    bottom: calc(
+      35px + env(safe-area-inset-bottom)
+    );
+  }
+
+  .whatsapp-flutuante img {
+    width: 34px;
+    height: 34px;
+  }
+
 }

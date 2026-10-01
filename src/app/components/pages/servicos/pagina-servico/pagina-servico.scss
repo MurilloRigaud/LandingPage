@@ -87,7 +87,11 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   }
 }
-
+.texto{
+  h1{
+    padding-left: 3px;
+  }
+}
 #caixa-introducao {
   text-indent: 3px;
 
@@ -211,5 +215,89 @@ h1 {
 @media (hover: none) {
   .cards-2:hover {
     transform: none;
+  }
+}
+@media (max-width: 699px) {
+  .sessao-1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    padding: 20px 12px;
+    border-bottom: none;
+  }
+
+  /* Introdução ocupa toda a largura */
+  #caixa-introducao {
+    grid-column: 1 / -1;
+
+    border: none;
+    padding: 0 4px 16px;
+    margin-bottom: 4px;
+
+    background: transparent;
+  }
+
+  #caixa-introducao p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  #caixa-introducao h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.15;
+    padding-top: 8px;
+  }
+
+  /* Cards dos benefícios */
+  .sessao-1 .cards:not(#caixa-introducao) {
+    min-width: 0;
+
+    padding: 16px 14px 18px;
+
+    background: #0c0c0c;
+    border: 1px solid #292929;
+    border-radius: 12px;
+
+    line-height: 1.4;
+  }
+
+  .sessao-1 .cards:not(#caixa-introducao) .material-symbols-outlined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 10px;
+    padding: 0;
+
+    border-radius: 10px;
+
+    background: rgba(255, 0, 0, 0.08);
+    border: 1px solid rgba(255, 0, 0, 0.25);
+
+    color: red;
+    font-size: 26px;
+  }
+
+  .sessao-1 .cards:not(#caixa-introducao) h3 {
+    padding: 0;
+    margin: 0 0 8px;
+
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+
+  .sessao-1 .cards:not(#caixa-introducao) p {
+    padding: 0;
+    margin: 0;
+
+    font-size: 0.78rem;
+    line-height: 1.45;
+
+    color: #bdbdbd;
   }
 }

@@ -2,7 +2,6 @@ export const SERVICOS = {
 
   acessorios:{
 
-    categoria: 'Tico Film',
 
     titulo: 'Acessórios',
 
@@ -89,13 +88,13 @@ export const SERVICOS = {
     tituloDestaque: 'Automotivas',
 
     subtitulo:
-      'Proteção, conforto e estilo para o seu veiculo',
+      'Proteção, conforto e estilo para o seu veículo',
 
       descricao:
       'As peliculas automotivas são uma solução moderna que agregam mais segurança, conforto térmico e privacidade, além de valorizarem o visual do seu carro',
 
       destaques: [
-      'Proteção conta raios solares',
+      'Proteção contra raios solares',
       'Maior privacidade',
       'Redução de calor interno',
       'Conforto durante a condução',
@@ -113,7 +112,7 @@ export const SERVICOS = {
       {
         icone: 'beenhere',
         titulo: 'Proteção Solar',
-        descricao: 'Bloqueia até 99% dos raios UV, protegendo você e o interior do seu veiculo.'
+        descricao: 'Bloqueia até 99% dos raios UV, protegendo você e o interior do seu veículo.'
       },
       {
         icone: 'sunny',
@@ -128,7 +127,7 @@ export const SERVICOS = {
       {
         icone: 'diamond',
         titulo: 'Estilo e Valorização',
-        descricao: 'Um visual moderno que destaca o seu veiculo e aumenta seu valor.'
+        descricao: 'Um visual moderno que destaca o seu veículo e aumenta seu valor.'
       }
     ],
     titulo1: 'PELICULAS UTILIZADAS',
@@ -193,7 +192,7 @@ export const SERVICOS = {
       {
         icone: 'beenhere',
         titulo: 'Mais segurança',
-        descricao: 'Evite roubos e recupere seu veiculo com mais agilidade.'
+        descricao: 'Evite roubos e recupere seu veículo com mais agilidade.'
       },
       {
         icone: 'location_on',
@@ -208,7 +207,7 @@ export const SERVICOS = {
       {
         icone: 'headphones',
         titulo: 'Suporte Especializado',
-        descricao: 'Nossa equipe está sempre disponpivel para te atender e tirar suas dúvidas.'
+        descricao: 'Nossa equipe está sempre disponivel para te atender e tirar suas dúvidas.'
       }
     ],
     titulo1: 'NOSSOS RASTREADORES EM AÇÃO',
@@ -217,7 +216,7 @@ export const SERVICOS = {
     itens: [
       {
         titulo: 'Localização em tempo real',
-        descricao: 'Veja a posição do seu veiculo no mapa, a qualquer momento',
+        descricao: 'Veja a posição do seu veículo no mapa, a qualquer momento',
         imagem: '/CelularGps.jpg'
       },
       {
@@ -226,8 +225,8 @@ export const SERVICOS = {
         imagem: '/PessoaSuspeita.jpg'
       },
       {
-        titulo: 'Veiculos',
-        descricao: 'Proteção completa para todos os tipos de veiculos',
+        titulo: 'Veículos',
+        descricao: 'Proteção completa para todos os tipos de veículos',
         imagem: '/Veiculos.png'
       }
     ]
@@ -247,7 +246,7 @@ export const SERVICOS = {
       'Mais estilo, proteção, e personalidade para o seu carro',
 
       descricao:
-      'A plotagem automotiva é a escolha perfeita para quem deseja renovar o visual do veiculo com sofisticação e segurança. Utilizamos materiais de alta performance e técnicas avançadas para garantir um estilo um resultado impecável e duradouro',
+      'A plotagem automotiva é a escolha perfeita para quem deseja renovar o visual do veículo com sofisticação e segurança. Utilizamos materiais de alta performance e técnicas avançadas para garantir um resultado impecável e duradouro',
 
       destaques: [
       'Personalização Exclusiva',
@@ -273,7 +272,7 @@ export const SERVICOS = {
       {
         icone: 'beenhere',
         titulo: 'Proteção da pintura',
-        descricao: 'Preserva a pintura original contra riscos e imtempéries.'
+        descricao: 'Preserva a pintura original contra riscos e intempéries.'
       },
       {
         icone: 'diamond',
@@ -287,22 +286,22 @@ export const SERVICOS = {
       }
     ],
     titulo1: 'NOSSOS SERVIÇOS EM DESTAQUE',
-    titulo2: 'Possibilidades para transformar seu veiculo',
+    titulo2: 'Possibilidades para transformar seu veículo',
 
     itens: [
       {
         titulo: 'Envelopamento completo',
-        descricao: 'Envelopamento completo do seu veiculo',
+        descricao: 'Envelopamento completo do seu veículo',
         imagem: '/EnvelopamentoCompleto.png'
       },
       {
         titulo: 'Detalhes Personalizados',
-        descricao: 'Envelopamento de peças individuais do seu veiculo',
+        descricao: 'Envelopamento de peças individuais do seu veículo',
         imagem: '/EnvelopamentoPeca.png'
       },
       {
         titulo: 'Diferentes materiais',
-        descricao: 'Vários tipos de cores e materias para utilizar',
+        descricao: 'Vários tipos de cores e materiais para utilizar',
         imagem: '/Paletas.png'
       }
     ]

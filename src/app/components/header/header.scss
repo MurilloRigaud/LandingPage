@@ -23,7 +23,7 @@
 }
 
 .texto {
-  padding: 0 0 0 12px;
+  padding: 0 0 5px 12px;
   line-height: 1.3;
 
   h1 {
@@ -67,7 +67,6 @@
   }
 }
 
-/* Menu — em coluna, escondido por padrão no mobile */
 nav {
   display: none;
   flex-direction: column;
@@ -87,9 +86,7 @@ nav {
   }
 }
 
-/* ===================================
-   TABLET / DESKTOP
-=================================== */
+
 @media (min-width: 900px) {
   .cabecalho {
     height: 103px;
