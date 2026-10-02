@@ -32,7 +32,43 @@
     padding-bottom: 12px;
   }
 }
+.inicio{
+  display: flex;
+  gap: 30px;
 
+  #card{
+    background-color: black;
+    border: solid 1px red;
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
+  }
+  h1{
+    border: solid 1px red;
+    width: 80%;
+  }
+}
+
+.session-1{
+  display: flex;
+
+  .cards-1{
+  background: #080808;
+  border: 1px solid #333;
+  width: 90%;
+  }
+  .material-symbols-outlined{
+  color: red;
+  font-size: 1.9em;
+  vertical-align: top;
+  padding-right: 10px;
+}
+}
+
+.session-2{
+  display: flex;
+  
+}
 .imagem-header {
   width: 100%;
   display: flex;
@@ -89,7 +125,7 @@
   }
 }
 
-.material-symbols-outlined.icone-minimizar {
+.material-symbols-outlined{
   color: red;
 }
 
