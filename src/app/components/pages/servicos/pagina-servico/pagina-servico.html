@@ -29,47 +29,43 @@
 
   <div class="sessao-1">
     <nav class="cards" id="caixa-introducao">
-      <p>
-        <span class="material-symbols-outlined icone-minimizar" translate="no"> minimize</span>{{ servico.cardIntroducao.titulo }}
+      <p class="titulo-secao">
+        <span class="linha-vermelha"></span>
+
+        {{ servico.cardIntroducao.titulo }}
       </p>
       <h2>{{ servico.cardIntroducao.subtitulo }} <br /></h2>
     </nav>
 
     @for (opcao of servico.opcoes; track opcao.titulo) {
-    <nav class="cards">
-
-        <span class="material-symbols-outlined" translate="no"> {{opcao.icone}} </span>
+      <nav class="cards">
+        <span class="material-symbols-outlined" translate="no"> {{ opcao.icone }} </span>
 
         <h3>{{ opcao.titulo }}</h3>
 
         <p>{{ opcao.descricao }}</p>
-
-    </nav>
-  }
+      </nav>
+    }
   </div>
 
   <div class="introducao">
-    <p><span class="material-symbols-outlined icone-minimizar" translate="no"> minimize</span>{{servico.titulo1}}</p>
+    <p class="titulo-secao">
+      <span class="linha-vermelha"></span>
+      {{ servico.titulo1 }}
+    </p>
     <h2>{{ servico.titulo2 }}</h2>
   </div>
 
   <div class="sessao-2">
-
     @for (item of servico.itens; track item.titulo) {
       <nav class="cards-2">
-
-        <div class="img-2" [style.background-image]="'url(' + item.imagem + ')'">
-
-        </div>
+        <div class="img-2" [style.background-image]="'url(' + item.imagem + ')'"></div>
 
         <div class="texto-2">
-
           <h3>{{ item.titulo }}</h3>
 
           <p>{{ item.descricao }}</p>
-
         </div>
-
       </nav>
     }
   </div>

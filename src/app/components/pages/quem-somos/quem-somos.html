@@ -1,64 +1,119 @@
-<div class="container">
-  <div class="header">
-    <div class="texto">
-      <p id="titulo"><span class="material-symbols-outlined icone-minimizar"> minimize</span>Quem somos</p>
-      <article class="inicio">
+<section class="quem-somos-page">
+  <div class="quem-somos-container">
+    <div class="hero-quem-somos">
+      <div class="conteudo">
+        <div class="topo-conteudo">
+          <p class="mini-titulo">
+            <span></span>
+            Quem somos
+          </p>
+
+          <div class="experiencia">
+            <span class="material-symbols-outlined" translate="no"> workspace_premium </span>
+
+            <div>
+              <strong>10 anos de experiência</strong>
+              <p>em Vitória da Conquista</p>
+            </div>
+          </div>
+        </div>
+
         <h1>
-          Mais que uma loja,<span style="color: red"> somos apaixonados por carros</span>
+          Mais que uma loja,
+          <span>somos apaixonados por carros</span>
         </h1>
-        <p id="card"><span class="material-symbols-outlined icone-minimizar"> trophy</span>10 anos de experiência em Vitória da Conquista</p>
-      </article>
-      <p>
-        A Tico Film é uma empresa especializada em películas automotivas, acessórios e estética
-        veicular, com 10 anos de experiência em Vitória da Conquista. Unimos conhecimento, tecnologia e paixão pelo universo automotivo para oferecer sempre o melhor para o seu veiculo
-      </p>
-      <div class="session-1">
-        <article class="cards-1">
-          <h3><span class="material-symbols-outlined icone-minimizar">groups</span>Quem Somos</h3>
-          <p>Somos uma equipe que ama o mundo automotivo e trabalha com foco em película, acessórios e estética veicular, sempre com profissioalismo e dedicação.</p>
-        </article>
 
-        <article class="cards-1">
-          <h3><span class="material-symbols-outlined ">target</span>Nossa missão</h3>
-          <p>Entregar produtos e serviços de alta qualidade, garantindo mais conforto, segurança e satisfação para nossos clientes.</p>
-        </article>
+        <p class="descricao-principal">
+          A Tico Film é uma empresa especializada em películas automotivas, acessórios e estética
+          veicular, com 10 anos de experiência em Vitória da Conquista. Unimos conhecimento,
+          tecnologia e paixão pelo universo automotivo para oferecer sempre o melhor para o seu
+          veículo.
+        </p>
 
-        <article class="cards-1">
-            <h3><span class="material-symbols-outlined icone-minimizar">beenhere</span>Nosso compromisso</h3>
-            <p>Atenção aos detalhes, transparência e um atendimento próximo, sempre buscando o melhor resultado para o seu veículo.</p>
-        </article>
+        <div class="informacoes">
+          <article class="informacao">
+            <div class="titulo-info">
+              <span class="material-symbols-outlined" translate="no"> groups </span>
+
+              <h2>Quem somos</h2>
+            </div>
+
+            <p>
+              Somos uma equipe apaixonada pelo universo automotivo, especializada em películas,
+              acessórios e estética veicular, sempre com profissionalismo e dedicação.
+            </p>
+          </article>
+
+          <article class="informacao">
+            <div class="titulo-info">
+              <span class="material-symbols-outlined" translate="no"> track_changes </span>
+
+              <h2>Nossa missão</h2>
+            </div>
+
+            <p>
+              Entregar produtos e serviços de alta qualidade, proporcionando mais conforto,
+              segurança e satisfação para nossos clientes.
+            </p>
+          </article>
+
+          <article class="informacao">
+            <div class="titulo-info">
+              <span class="material-symbols-outlined" translate="no"> verified_user </span>
+
+              <h2>Nosso compromisso</h2>
+            </div>
+
+            <p>
+              Atenção aos detalhes, transparência e um atendimento próximo, sempre buscando o melhor
+              resultado para o seu veículo.
+            </p>
+          </article>
+        </div>
+
       </div>
 
-      <div class="session-2">
-        <article class="cards-2">
-          <h3>Equipe experiente</h3>
-          <p>Profissionais qualificados e apaixonados por carros.</p>
-        </article>
-
-        <article class="cards-2">
-          <h3>Produtos de qualidades</h3>
-          <p>Trabalhamos com as melhores marcas do mercado.</p>
-        </article>
-
-        <article class="cards-2">
-          <h3>Atendimento transparente</h3>
-          <p>Orientação clara e um serviço de confiança do início ao fim.</p>
-        </article>
+      <div class="imagem-principal">
+        <img src="/QuemSomos.jpeg" alt="Veículo na Tico Film" />
       </div>
     </div>
 
-    <div class="imagem-header">
-      <div class="carrossel-frame">
-        <div class="carrossel">
-          <img
-            *ngFor="let imagem of imagens; let i = index"
-            [src]="imagem"
-            alt="Multimidia"
-            class="slide"
-            [class.ativo]="i === indiceAtual"
-          />
+    <div class="diferenciais">
+      <article class="card-diferencial">
+        <div class="icone-card">
+          <span class="material-symbols-outlined" translate="no"> groups </span>
         </div>
-      </div>
+
+        <div>
+          <h3>Equipe experiente</h3>
+
+          <p>Profissionais qualificados e apaixonados por carros.</p>
+        </div>
+      </article>
+
+      <article class="card-diferencial">
+        <div class="icone-card">
+          <span class="material-symbols-outlined" translate="no"> diamond </span>
+        </div>
+
+        <div>
+          <h3>Produtos de qualidade</h3>
+
+          <p>Trabalhamos com marcas selecionadas e produtos de alto padrão.</p>
+        </div>
+      </article>
+
+      <article class="card-diferencial">
+        <div class="icone-card">
+          <span class="material-symbols-outlined" translate="no"> handshake </span>
+        </div>
+
+        <div>
+          <h3>Atendimento transparente</h3>
+
+          <p>Orientação clara e um serviço de confiança do início ao fim.</p>
+        </div>
+      </article>
     </div>
   </div>
-</div>
+</section>

@@ -73,15 +73,31 @@ h1 {
     'opsz' 24;
   vertical-align: middle;
 }
-.material-symbols-outlined.icone-minimizar {
-  vertical-align: top;
-}
+
 .sessao-1 {
   display: grid;
   grid-template-columns: 1fr;
   border-bottom: 1px solid rgba(128, 128, 128, 0.205);
 }
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
+  text-indent: 0;
+}
+
+.linha-vermelha {
+  display: block;
+
+  width: 14px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background-color: red;
+  border-radius: 2px;
+}
 @media (min-width: 700px) {
   .sessao-1 {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));

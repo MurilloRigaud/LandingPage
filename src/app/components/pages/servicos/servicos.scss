@@ -30,20 +30,6 @@ p{
   padding: 40px 20px 0;
 }
 
-@media (min-width: 620px) {
-  .container {
-    grid-template-columns: repeat(2, minmax(0, 300px));
-    padding-top: 50px;
-  }
-}
-
- @media (min-width: 1024px) {
-  .container {
-    grid-template-columns: repeat(4, 300px);
-  }
-}
-
-
 .cards{
   background-color: #222222;
   border-radius: 15px;
@@ -51,14 +37,21 @@ p{
   padding: 20px;
   box-sizing: border-box;
   transition: 0.3s ease;
+  line-height: 45px;
+
+  img{
+  background-color: rgba(255, 0, 0, 0.12);
+  border-radius: 15px;
+  padding: 3px;
 }
 
-.cards > p{
+ p{
   line-height: 20px;
   font-size: 0.9em;
 }
-.cards > a{
+ a{
   font-weight: bold;
+}
 }
 .cards:hover{
   background: linear-gradient(
@@ -70,52 +63,25 @@ p{
   border: solid 1px red;
 
 }
-#caixa1{
-  line-height: 45px;
-}
-#caixa1 > img {
-  background-color: rgba(255, 0, 0, 0.12),;
-  border-radius: 15px;
-  padding: 3px;
-}
-#caixa2{
-  line-height: 45px;
-}
-#caixa2 > img {
-  background-color: rgba(255, 0, 0, 0.12),;
-  border-radius: 15px;
-  padding: 3px;
-}
-
-#caixa3{
-  line-height: 45px;
-}
 #caixa3 > img {
-  background-color: rgba(255, 0, 0, 0.12),;
+  background-color: rgba(255, 0, 0, 0.12);
   border-radius: 15px;
   padding: 3px;
   padding-right: 15px;
 }
-#caixa4{
-  line-height: 45px;
-}
-#caixa4 > img {
-  background-color: rgba(255, 0, 0, 0.12),;
-  border-radius: 15px;
-  padding: 3px;
-}
 
 #caixa4{
-  line-height: 45px;
-
+  padding-top: 33px;
 }
-#caixa5{
-  line-height: 45px;
+@media (min-width: 620px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    padding-top: 50px;
+  }
 }
-#caixa5 > img {
-  background-color: rgba(255, 0, 0, 0.12),;
-  border-radius: 15px;
-  padding: 3px;
-  padding-bottom: 7px;
 
+ @media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 300px);
+  }
 }
