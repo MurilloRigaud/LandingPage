@@ -15,22 +15,24 @@ export class Home implements OnDestroy, OnInit {
 
   slides = [
   {
-    image: '/BannerPelicula.png',
-    mobileImage: '/BannerPelicula-mobile.png',
+    image: 'BannerPelicula.png',
+    mobileImage: 'BannerPelicula-mobile.png',
     alt: 'Aplicação de películas automotivas'
   },
   {
-    image: '/BannerRastreadores.png',
-    mobileImage: '/BannerRastreadores-mobile.png',
+    image: 'BannerRastreadores.png',
+    mobileImage: 'BannerRastreadores-mobile.png',
     alt: 'Instalação de rastreadores veiculares'
   },
   {
-    image: '/BannerPlotagem.png',
-    mobileImage: '/BannerPlotagem-mobile.png',
+    image: 'BannerPlotagem.png',
+    mobileImage: 'BannerPlotagem-mobile.png',
     alt: 'Plotagem e aplicação de PPF'
   }
 ];
-
+assetUrl(arquivo: string): string {
+  return new URL(arquivo, document.baseURI).href;
+}
 
    ngOnInit(): void {
     this.startCarrossel();
