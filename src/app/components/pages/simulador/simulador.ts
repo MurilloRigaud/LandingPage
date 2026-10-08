@@ -31,8 +31,8 @@ export class Simulador implements OnDestroy {
   // IMAGENS FIXAS (só existe carro agora)
   // ==========================================
 
-  private readonly IMAGEM_CARROCERIA_VERDE = '/carro-plotagem-verde.png';
-  readonly imagemMascaraVidro = '/carro-vidro-mask.png';
+  private readonly IMAGEM_CARROCERIA_VERDE = 'carro-plotagem-verde.png';
+  readonly imagemMascaraVidro = 'carro-vidro-mask.png';
 
   // ==========================================
   // ESTADO INTERNO DO CANVAS (COR DO CARRO)
@@ -132,10 +132,6 @@ export class Simulador implements OnDestroy {
 
     img.src = src;
   }
-
-  // ==========================================
-  // DESENHA A CARROCERIA COLORIDA NO CANVAS
-  // ==========================================
 
   private colorirCarroceria(corHex: string, tentativas = 0): void {
     const canvas = this.canvasCarroceriaRef?.nativeElement;

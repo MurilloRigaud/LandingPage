@@ -13,7 +13,7 @@ export const SERVICOS = {
     descricao:
       'Aqui você encontra os melhores acessórios automotivos para deixar seu carro ou moto ainda mais completo, funcional e seguro. Trabalhamos com marcas de qualidade e instalação profissional.',
 
-    imagemHeader: '/ImagemMultimidia.png',
+    imagemHeader: 'ImagemMultimidia.png',
 
     destaques: [
       'Travas elétricas',
@@ -57,22 +57,22 @@ export const SERVICOS = {
       {
         titulo: 'Trava Elétrica',
         descricao: 'Mais segurança e praticidade para o seu dia a dia',
-        imagem: '/chave-de-carro.jpg'
+        imagem: 'chave-de-carro.jpg'
       },
       {
         titulo: 'Câmera de ré',
         descricao: 'Facilita as manobras e evita imprevistos',
-        imagem: '/camera-de-re.jpg'
+        imagem: 'camera-de-re.jpg'
       },
       {
         titulo: 'Farol de led',
         descricao: 'Ilumine o seu caminho com o máximo de segurança!',
-        imagem: '/farol-de-led.jpg'
+        imagem: 'farol-de-led.jpg'
       },
       {
         titulo: 'Sensor de estacionamento',
         descricao: 'Mais segurança ao estacionar, com aviso sonoro e visual',
-        imagem: '/sensor-de-estacionamento.jpg'
+        imagem: 'sensor-de-estacionamento.jpg'
       }
     ]
 
@@ -101,7 +101,7 @@ export const SERVICOS = {
       'Acabamento e estética'
     ],
 
-    imagemHeader: '/AplicacaoPelicula.png',
+    imagemHeader: 'AplicacaoPelicula.png',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
@@ -137,22 +137,22 @@ export const SERVICOS = {
       {
         titulo: 'G5',
         descricao: 'Extremamente escura',
-        imagem: '/PeliculaG5.jpg'
+        imagem: 'PeliculaG5.jpg'
       },
       {
         titulo: 'G20',
         descricao: 'Escura, com bastante privacidade',
-        imagem: '/PeliculaG20.jpg'
+        imagem: 'PeliculaG20.jpg'
       },
       {
         titulo: 'G35',
         descricao: 'Equilíbrio entre visibilidade e privacidade',
-        imagem: '/PeliculaG35.png'
+        imagem: 'PeliculaG35.png'
       },
       {
         titulo: 'G50',
         descricao: 'Mais clara, mantendo proteção e conforto',
-        imagem: '/PeliculaG50.png'
+        imagem: 'PeliculaG50.png'
       }
     ]
 
@@ -181,7 +181,7 @@ export const SERVICOS = {
       'Instalação especializada'
     ],
 
-    imagemHeader: '/Rastreadores.jpg',
+    imagemHeader: 'Rastreadores.jpg',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
@@ -217,17 +217,17 @@ export const SERVICOS = {
       {
         titulo: 'Localização em tempo real',
         descricao: 'Veja a posição do seu veículo no mapa, a qualquer momento',
-        imagem: '/CelularGps.jpg'
+        imagem: 'CelularGps.jpg'
       },
       {
         titulo: 'Alerta de movimento',
         descricao: 'Receba notificações em casos de movimentações suspeitas',
-        imagem: '/PessoaSuspeita.jpg'
+        imagem: 'PessoaSuspeita.jpg'
       },
       {
         titulo: 'Veículos',
         descricao: 'Proteção completa para todos os tipos de veículos',
-        imagem: '/Veiculos.png'
+        imagem: 'Veiculos.png'
       }
     ]
 
@@ -256,7 +256,7 @@ export const SERVICOS = {
       'Aplicação especializada'
     ],
 
-    imagemHeader: '/CarroPlotagem.jpg',
+    imagemHeader: 'CarroPlotagem.jpg',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
@@ -292,17 +292,17 @@ export const SERVICOS = {
       {
         titulo: 'Envelopamento completo',
         descricao: 'Envelopamento completo do seu veículo',
-        imagem: '/EnvelopamentoCompleto.png'
+        imagem: 'EnvelopamentoCompleto.png'
       },
       {
         titulo: 'Detalhes Personalizados',
         descricao: 'Envelopamento de peças individuais do seu veículo',
-        imagem: '/EnvelopamentoPeca.png'
+        imagem: 'EnvelopamentoPeca.png'
       },
       {
         titulo: 'Diferentes materiais',
         descricao: 'Vários tipos de cores e materiais para utilizar',
-        imagem: '/Paletas.png'
+        imagem: 'Paletas.png'
       }
     ]
 
