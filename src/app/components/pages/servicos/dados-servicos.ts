@@ -101,7 +101,7 @@ export const SERVICOS = {
       'Acabamento e estética'
     ],
 
-    imagemHeader: 'AplicacaoPelicula.png',
+    imagemHeader: 'AplicacaoPelicula.webp',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
@@ -181,7 +181,7 @@ export const SERVICOS = {
       'Instalação especializada'
     ],
 
-    imagemHeader: 'Rastreadores.jpg',
+    imagemHeader: 'Rastreadores.webp',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
@@ -217,17 +217,17 @@ export const SERVICOS = {
       {
         titulo: 'Localização em tempo real',
         descricao: 'Veja a posição do seu veículo no mapa, a qualquer momento',
-        imagem: 'CelularGps.jpg'
+        imagem: 'CelularGps.webp'
       },
       {
         titulo: 'Alerta de movimento',
         descricao: 'Receba notificações em casos de movimentações suspeitas',
-        imagem: 'PessoaSuspeita.jpg'
+        imagem: 'PessoaSuspeita.webp'
       },
       {
         titulo: 'Veículos',
         descricao: 'Proteção completa para todos os tipos de veículos',
-        imagem: 'Veiculos.png'
+        imagem: 'Veiculos.webp'
       }
     ]
 
@@ -256,7 +256,7 @@ export const SERVICOS = {
       'Aplicação especializada'
     ],
 
-    imagemHeader: 'CarroPlotagem.jpg',
+    imagemHeader: 'CarroPlotagem.webp',
 
     cardIntroducao: {
       titulo: 'POR QUE ESCOLHER?',
