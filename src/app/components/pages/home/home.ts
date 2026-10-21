@@ -5,160 +5,115 @@ import {
   signal
 } from '@angular/core';
 
-import {
-  CommonModule
-} from '@angular/common';
-
-import {
-  RouterLink
-} from '@angular/router';
-
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-
   imports: [
     CommonModule,
     RouterLink
   ],
-
   templateUrl: './home.html',
-
   styleUrl: './home.scss',
 })
-export class Home
-implements OnDestroy, OnInit {
+export class Home implements OnInit, OnDestroy {
 
   currentSlide = signal(0);
 
-
-  private intervalId?:
-    ReturnType<typeof setInterval>;
-
+  private intervalId?: ReturnType<typeof setInterval>;
 
   slides = [
-
     {
-      image:
-        'BannerPelicula.webp',
+      image: 'BannerPelicula.png',
+      mobileImage: 'BannerPelicula-mobile.png',
 
-      mobileImage:
-        'BannerPelicula-mobile.webp',
+      categoria: 'PELÍCULAS AUTOMOTIVAS',
 
-      alt:
-        'Aplicação de películas automotivas'
+      titulo: 'Mais conforto e proteção',
+      tituloDestaque: 'para o seu veículo',
+
+      descricao:
+        'Películas de alta qualidade com aplicação profissional, mais segurança, privacidade e estilo.',
+
+      alt: 'Aplicação de películas automotivas'
     },
 
     {
-      image:
-        'BannerRastreadores.webp',
+      image: 'BannerRastreadores.png',
+      mobileImage: 'BannerRastreadores-mobile.png',
 
-      mobileImage:
-        'BannerRastreadores-mobile.webp',
+      categoria: 'RASTREAMENTO VEICULAR',
 
-      alt:
-        'Instalação de rastreadores veiculares'
+      titulo: 'Mais segurança e controle',
+      tituloDestaque: 'para o seu veículo',
+
+      descricao:
+        'Acompanhe seu veículo e tenha mais tranquilidade com soluções de rastreamento automotivo.',
+
+      alt: 'Instalação de rastreadores veiculares'
     },
 
     {
-      image:
-        'BannerPlotagem.webp',
+      image: 'BannerPlotagem.png',
+      mobileImage: 'BannerPlotagem-mobile.png',
 
-      mobileImage:
-        'BannerPlotagem-mobile.webp',
+      categoria: 'PLOTAGEM AUTOMOTIVA',
 
-      alt:
-        'Plotagem e aplicação de PPF'
+      titulo: 'Personalize e transforme',
+      tituloDestaque: 'o visual do seu carro',
+
+      descricao:
+        'Estilo, proteção e personalidade com aplicações profissionais e acabamento de qualidade.',
+
+      alt: 'Plotagem e aplicação de PPF'
     }
-
   ];
 
-
-  assetUrl(
-    arquivo: string
-  ): string {
-
+  assetUrl(arquivo: string): string {
     return new URL(
       arquivo,
       document.baseURI
     ).href;
-
   }
-
 
   ngOnInit(): void {
-
     this.startCarrossel();
-
   }
-
 
   startCarrossel(): void {
-
-    this.intervalId =
-      setInterval(
-        () => {
-
-          this.nextSlide();
-
-        },
-        5000
-      );
-
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
   }
-
 
   nextSlide(): void {
-
     this.currentSlide.update(
-      current =>
-        (
-          current + 1
-        ) %
+      atual =>
+        (atual + 1) %
         this.slides.length
     );
-
   }
 
-
   previousSlide(): void {
-
     this.currentSlide.update(
-      current =>
+      atual =>
         (
-          current -
+          atual -
           1 +
           this.slides.length
         ) %
         this.slides.length
     );
-
   }
 
-
-  goToSlide(
-    index: number
-  ): void {
-
-    this.currentSlide.set(
-      index
-    );
-
+  goToSlide(index: number): void {
+    this.currentSlide.set(index);
   }
-
 
   ngOnDestroy(): void {
-
-    if (
-      this.intervalId
-    ) {
-
-      clearInterval(
-        this.intervalId
-      );
-
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
     }
-
   }
-
 }

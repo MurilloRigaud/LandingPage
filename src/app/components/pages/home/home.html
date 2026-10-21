@@ -1,37 +1,53 @@
 <!-- =====================================================
-     CARROSSEL / BANNERS EXISTENTES
-     ===================================================== -->
+     CARROSSEL
+===================================================== -->
 
 <section class="hero">
   <div class="carrossel">
-
     @for (slide of slides; track slide.image; let i = $index) {
-
       <div
         class="slide"
         [class.active]="i === currentSlide()"
         [style.--bg-desktop]="'url(' + assetUrl(slide.image) + ')'"
         [style.--bg-mobile]="'url(' + assetUrl(slide.mobileImage) + ')'"
       >
-
         <picture>
+          <source media="(max-width: 768px)" [srcset]="assetUrl(slide.mobileImage)" />
 
-          <source
-            media="(max-width: 768px)"
-            [srcset]="assetUrl(slide.mobileImage)"
-          />
-
-          <img
-            [src]="assetUrl(slide.image)"
-            [alt]="slide.alt"
-          />
-
+          <img [src]="assetUrl(slide.image)" [alt]="slide.alt" />
         </picture>
 
+        <!-- CONTEÚDO SOBRE O BANNER -->
+
+        <div class="slide-overlay">
+          <div class="slide-conteudo">
+            <p class="slide-categoria">
+              <span></span>
+
+              {{ slide.categoria }}
+            </p>
+
+            <h1>
+              {{ slide.titulo }}
+
+              <strong>
+                {{ slide.tituloDestaque }}
+              </strong>
+            </h1>
+
+            <p class="slide-descricao">
+              {{ slide.descricao }}
+            </p>
+
+            <a routerLink="/servicos" class="slide-cta">
+              Conheça nossos serviços
+
+              <span class="material-symbols-outlined" translate="no"> arrow_forward </span>
+            </a>
+          </div>
+        </div>
       </div>
-
     }
-
 
     <button
       class="carrossel-btn prev"
@@ -42,7 +58,6 @@
       &#10094;
     </button>
 
-
     <button
       class="carrossel-btn next"
       type="button"
@@ -52,802 +67,221 @@
       &#10095;
     </button>
 
-
     <div class="indicators">
-
       @for (slide of slides; track slide.image; let i = $index) {
-
         <button
           type="button"
           [class.active]="i === currentSlide()"
           (click)="goToSlide(i)"
           [attr.aria-label]="'Ir para o slide ' + (i + 1)"
         ></button>
-
       }
-
     </div>
-
   </div>
 </section>
 
-
 <!-- =====================================================
      CONTEÚDO DA HOME
-     ===================================================== -->
+===================================================== -->
 
 <main class="home-conteudo">
-
-
   <!-- ===================================================
-       PRÉVIA DOS SERVIÇOS
-       =================================================== -->
-
-  <section class="home-secao servicos-home">
-
-    <div class="secao-interna">
-
-      <div class="secao-topo">
-
-        <div>
-
-          <p class="etiqueta">
-            <span></span>
-            NOSSOS SERVIÇOS
-          </p>
-
-          <h2>
-            Tudo o que o seu veículo
-            <strong>precisa</strong>
-          </h2>
-
-        </div>
-
-
-        <div class="secao-topo-lateral">
-
-          <p>
-            Conheça algumas das soluções que oferecemos
-            para deixar o seu veículo mais seguro,
-            confortável e com a sua identidade.
-          </p>
-
-          <a
-            routerLink="/servicos"
-            class="btn-outline"
-          >
-            Ver todos os serviços
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              arrow_forward
-            </span>
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="servicos-grid">
-
-
-        <!-- PELÍCULAS -->
-
-        <article class="servico-card">
-
-          <!--
-            IMAGEM FUTURA:
-            Geraremos uma imagem para o card de
-            Películas Automotivas.
-
-            Depois poderá ficar assim:
-
-            <img
-              [src]="assetUrl('home-peliculas.webp')"
-              alt="Película automotiva aplicada em veículo"
-            />
-          -->
-
-          <div
-            class="servico-media imagem-pendente"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="servico-card-conteudo">
-
-            <span
-              class="material-symbols-outlined servico-icone"
-              translate="no"
-            >
-              shield
-            </span>
-
-            <h3>
-              Películas Automotivas
-            </h3>
-
-            <p>
-              Mais conforto térmico, privacidade,
-              proteção e estilo para o seu veículo.
-            </p>
-
-            <a
-              routerLink="/servicos/peliculas"
-              class="link-card"
-            >
-              Saiba mais
-
-              <span
-                class="material-symbols-outlined"
-                translate="no"
-              >
-                arrow_forward
-              </span>
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- RASTREADORES -->
-
-        <article class="servico-card">
-
-          <!--
-            IMAGEM FUTURA:
-            Geraremos uma imagem para o card
-            de Rastreadores Veiculares.
-          -->
-
-          <div
-            class="servico-media imagem-pendente"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="servico-card-conteudo">
-
-            <span
-              class="material-symbols-outlined servico-icone"
-              translate="no"
-            >
-              location_on
-            </span>
-
-            <h3>
-              Rastreadores
-            </h3>
-
-            <p>
-              Mais controle e segurança com
-              acompanhamento do seu veículo.
-            </p>
-
-            <a
-              routerLink="/servicos/rastreadores"
-              class="link-card"
-            >
-              Saiba mais
-
-              <span
-                class="material-symbols-outlined"
-                translate="no"
-              >
-                arrow_forward
-              </span>
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- PLOTAGEM -->
-
-        <article class="servico-card">
-
-          <!--
-            IMAGEM FUTURA:
-            Geraremos uma imagem para o card
-            de Plotagem Automotiva.
-          -->
-
-          <div
-            class="servico-media imagem-pendente"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="servico-card-conteudo">
-
-            <span
-              class="material-symbols-outlined servico-icone"
-              translate="no"
-            >
-              palette
-            </span>
-
-            <h3>
-              Plotagem Automotiva
-            </h3>
-
-            <p>
-              Personalização, proteção da pintura
-              e uma nova identidade para o carro.
-            </p>
-
-            <a
-              routerLink="/servicos/plotagem"
-              class="link-card"
-            >
-              Saiba mais
-
-              <span
-                class="material-symbols-outlined"
-                translate="no"
-              >
-                arrow_forward
-              </span>
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ACESSÓRIOS -->
-
-        <article class="servico-card">
-
-          <!--
-            IMAGEM FUTURA:
-            Geraremos uma imagem para o card
-            de Acessórios Automotivos.
-          -->
-
-          <div
-            class="servico-media imagem-pendente"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="servico-card-conteudo">
-
-            <span
-              class="material-symbols-outlined servico-icone"
-              translate="no"
-            >
-              settings
-            </span>
-
-            <h3>
-              Acessórios Automotivos
-            </h3>
-
-            <p>
-              Tecnologia e praticidade com multimídia,
-              câmeras, sensores e muito mais.
-            </p>
-
-            <a
-              routerLink="/servicos/acessorios"
-              class="link-card"
-            >
-              Saiba mais
-
-              <span
-                class="material-symbols-outlined"
-                translate="no"
-              >
-                arrow_forward
-              </span>
-            </a>
-
-          </div>
-
-        </article>
-
-      </div>
-
-
-      <!-- DIFERENCIAIS RÁPIDOS -->
-
-      <div class="diferenciais-home">
-
-        <article>
-
-          <div class="diferencial-icone">
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              verified_user
-            </span>
-
-          </div>
-
-          <div>
-            <h3>Qualidade garantida</h3>
-
-            <p>
-              Produtos selecionados e instalação profissional.
-            </p>
-          </div>
-
-        </article>
-
-
-        <article>
-
-          <div class="diferencial-icone">
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              build
-            </span>
-
-          </div>
-
-          <div>
-            <h3>Profissionais experientes</h3>
-
-            <p>
-              Atenção aos detalhes em cada serviço realizado.
-            </p>
-          </div>
-
-        </article>
-
-
-        <article>
-
-          <div class="diferencial-icone">
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              workspace_premium
-            </span>
-
-          </div>
-
-          <div>
-            <h3>10 anos de experiência</h3>
-
-            <p>
-              Tradição e confiança em Vitória da Conquista.
-            </p>
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ===================================================
-       PRÉVIA QUEM SOMOS
-       =================================================== -->
+       QUEM SOMOS
+  ==================================================== -->
 
   <section class="quem-somos-home">
-
     <div class="secao-interna quem-somos-grid">
-
-
-      <!--
-        IMAGEM FUTURA:
-        Aqui iremos gerar uma imagem específica para
-        a Home representando a Tico Film / loja / equipe.
-
-        Depois:
-
-        <img
-          [src]="assetUrl('home-quem-somos.webp')"
-          alt="Tico Film Loja Automotiva"
-        />
-      -->
-
-      <div
-        class="quem-somos-imagem imagem-pendente"
-        aria-hidden="true"
-      ></div>
-
+      <div class="quem-somos-imagem">
+        <img [src]="assetUrl('Faixada.jpeg')" alt="Tico Film Loja Automotiva" />
+      </div>
 
       <div class="quem-somos-conteudo">
-
         <p class="etiqueta etiqueta-escura">
           <span></span>
+
           QUEM SOMOS
         </p>
 
         <h2>
           Mais que uma loja,
-          <strong>
-            somos apaixonados por carros
-          </strong>
+
+          <strong> somos apaixonados por carros </strong>
         </h2>
 
         <p class="quem-somos-texto">
-          Há 10 anos a Tico Film une experiência,
-          tecnologia e cuidado com o universo automotivo.
-          Nosso objetivo é entregar soluções que valorizem
-          cada veículo e atendam à necessidade de cada cliente.
+          Há 10 anos a Tico Film une experiência, tecnologia e cuidado com o universo automotivo.
+          Nosso objetivo é entregar soluções que valorizem cada veículo e atendam às necessidades de
+          cada cliente.
         </p>
 
-
-        <a
-          routerLink="/quem-somos"
-          class="btn-primary"
-        >
+        <a routerLink="/quem-somos" class="btn-primary">
           Conheça nossa história
 
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            arrow_forward
-          </span>
+          <span class="material-symbols-outlined" translate="no"> arrow_forward </span>
         </a>
 
-
         <div class="quem-somos-pontos">
-
           <div>
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              groups
-            </span>
+            <span class="material-symbols-outlined" translate="no"> groups </span>
 
             <p>
-              <strong>Equipe experiente</strong>
+              <strong> Equipe experiente </strong>
+
               Atendimento especializado.
             </p>
-
           </div>
 
-
           <div>
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              diamond
-            </span>
+            <span class="material-symbols-outlined" translate="no"> diamond </span>
 
             <p>
-              <strong>Produtos de qualidade</strong>
+              <strong> Produtos de qualidade </strong>
+
               Marcas selecionadas.
             </p>
-
           </div>
-
 
           <div>
-
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              handshake
-            </span>
+            <span class="material-symbols-outlined" translate="no"> handshake </span>
 
             <p>
-              <strong>Transparência</strong>
+              <strong> Transparência </strong>
+
               Confiança do início ao fim.
             </p>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-
   <!-- ===================================================
-       PRÉVIA DO SIMULADOR
-       =================================================== -->
+       SIMULADOR
+  ==================================================== -->
 
   <section class="home-secao simulador-home">
-
     <div class="secao-interna">
-
       <div class="simulador-box">
-
         <div class="simulador-conteudo">
-
           <p class="etiqueta">
             <span></span>
+
             SIMULADOR
           </p>
 
           <h2>
             Veja como pode ficar
-            <strong>
-              antes de aplicar
-            </strong>
+
+            <strong> antes de aplicar </strong>
           </h2>
 
           <p>
-            Teste diferentes opções de películas
-            e visualize o resultado no veículo antes
-            de escolher a opção ideal.
+            Teste diferentes opções de películas e visualize o resultado no veículo antes de
+            escolher a opção ideal.
           </p>
 
-          <a
-            routerLink="/simulador"
-            class="btn-primary"
-          >
+          <a routerLink="/simulador" class="btn-primary">
             Acessar simulador
 
-            <span
-              class="material-symbols-outlined"
-              translate="no"
-            >
-              arrow_forward
-            </span>
+            <span class="material-symbols-outlined" translate="no"> arrow_forward </span>
           </a>
-
         </div>
 
-
-        <!--
-          IMAGEM FUTURA:
-          Aqui iremos gerar a arte para destacar
-          o simulador na Home.
-
-          A ideia será mostrar um veículo com divisões
-          visuais representando diferentes níveis de película.
-
-          Depois:
-
-          <img
-            [src]="assetUrl('home-simulador.webp')"
-            alt="Prévia do simulador de películas"
-          />
-        -->
-
-        <div
-          class="simulador-imagem imagem-pendente"
-          aria-hidden="true"
-        ></div>
-
+        <div class="simulador-imagem">
+          <img [src]="assetUrl('SimuladorHome.png')" alt="Prévia do simulador de películas" />
+        </div>
       </div>
-
     </div>
-
   </section>
 
-
   <!-- ===================================================
-       PRÉVIA DAS AVALIAÇÕES
-       =================================================== -->
+       AVALIAÇÕES
+  ==================================================== -->
 
   <section class="home-secao avaliacoes-home">
-
     <div class="secao-interna">
-
-      <div class="avaliacoes-chamada">
-
+      <div class="avaliacoes-box">
         <div class="avaliacoes-icone">
-
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            reviews
-          </span>
-
+          <span class="material-symbols-outlined" translate="no"> reviews </span>
         </div>
 
-
-        <div class="avaliacoes-texto">
-
+        <div class="avaliacoes-conteudo">
           <p class="etiqueta">
             <span></span>
+
             AVALIAÇÕES
           </p>
 
           <h2>
             A experiência de quem
-            <strong>já confiou na Tico Film</strong>
+
+            <strong> já confiou na Tico Film </strong>
           </h2>
 
-          <div
-            class="estrelas"
-            aria-label="Avaliações de clientes"
-          >
-            ★ ★ ★ ★ ★
-          </div>
+          <div class="estrelas" aria-label="Cinco estrelas">★ ★ ★ ★ ★</div>
 
-          <p>
-            Veja as opiniões de clientes e conheça
-            um pouco mais sobre a experiência com
-            nossos serviços.
+          <p class="avaliacoes-descricao">
+            Conheça as opiniões de clientes e veja um pouco mais sobre a experiência com nossos
+            serviços.
           </p>
-
         </div>
 
-
-        <a
-          routerLink="/avaliacoes"
-          class="btn-outline"
-        >
+        <a routerLink="/avaliacoes" class="btn-outline">
           Ver avaliações
 
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            arrow_forward
-          </span>
+          <span class="material-symbols-outlined" translate="no"> arrow_forward </span>
         </a>
-
       </div>
-
     </div>
-
   </section>
 
-
   <!-- ===================================================
-       PRÉVIA DE CONTATO
-       =================================================== -->
+       CONTATO
+  ==================================================== -->
 
   <section class="home-secao contato-home">
-
     <div class="secao-interna">
-
-      <div class="secao-topo contato-topo">
-
-        <div>
-
+      <div class="contato-chamada">
+        <div class="contato-conteudo">
           <p class="etiqueta">
             <span></span>
-            CONTATO
+            FALE COM A GENTE
           </p>
 
           <h2>
-            Estamos prontos para
-            <strong>atender você</strong>
+            Pronto para cuidar
+            <strong>do seu veículo?</strong>
           </h2>
 
+          <p class="contato-descricao">
+            Tire suas dúvidas, conheça melhor nossos serviços ou fale diretamente com a equipe da
+            Tico Film.
+          </p>
+
+          <div class="contato-botoes">
+            <a
+              href="https://wa.me/5577981166684"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >
+              <span class="material-symbols-outlined" translate="no"> chat </span>
+
+              Falar no WhatsApp
+            </a>
+
+            <a routerLink="/contato" class="link-contato">
+              Contato e localização
+
+              <span class="material-symbols-outlined" translate="no"> arrow_forward </span>
+            </a>
+          </div>
         </div>
 
-        <p class="contato-intro">
-          Entre em contato, tire suas dúvidas
-          ou venha conhecer a Tico Film.
-        </p>
-
-      </div>
-
-
-      <div class="contatos-grid">
-
-
-        <a
-          href="https://wa.me/5577981166684"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contato-resumo"
-        >
-
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            chat
-          </span>
-
-          <div>
-            <strong>WhatsApp</strong>
-            <p>(77) 98116-6684</p>
-          </div>
-
-        </a>
-
-
-        <a
-          href="https://instagram.com/tico_film"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contato-resumo"
-        >
-
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            photo_camera
-          </span>
-
-          <div>
-            <strong>Instagram</strong>
-            <p>@tico_film</p>
-          </div>
-
-        </a>
-
-
-        <a
-          href="mailto:ticofilm40@gmail.com"
-          class="contato-resumo"
-        >
-
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            mail
-          </span>
-
-          <div>
-            <strong>E-mail</strong>
-            <p>ticofilm40@gmail.com</p>
-          </div>
-
-        </a>
-
-
-        <div class="contato-resumo">
-
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            schedule
-          </span>
-
-          <div>
-            <strong>Funcionamento</strong>
-            <p>Seg a Sex: 08h às 18h</p>
-            <p>Sábado: 08h às 12h</p>
-          </div>
-
+        <div class="contato-destaque" aria-hidden="true">
+          <span class="material-symbols-outlined" translate="no"> forum </span>
         </div>
-
       </div>
-
-
-      <div class="contato-acao">
-
-        <a
-          routerLink="/contato"
-          class="btn-primary"
-        >
-          Ver todas as informações
-
-          <span
-            class="material-symbols-outlined"
-            translate="no"
-          >
-            arrow_forward
-          </span>
-        </a>
-
-      </div>
-
     </div>
-
   </section>
-
 </main>
