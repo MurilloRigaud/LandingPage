@@ -12,7 +12,6 @@
   --texto-secundario: #aaa;
 }
 
-
 /* =========================================
    ESTRUTURA PRINCIPAL
 ========================================= */
@@ -27,13 +26,12 @@
 
   align-items: start;
 
-  gap: 45px;
+  column-gap: 45px;
+  row-gap: 18px;
 
   min-height: 100vh;
 
-  padding:
-    60px 5%
-    80px;
+  padding: 24px 5% 80px;
 
   background: #000;
 
@@ -42,69 +40,55 @@
   box-sizing: border-box;
 }
 
-
 /* =========================================
-   TEXTO
+   IDENTIFICADOR DA PÁGINA
 ========================================= */
 
-.Texto {
-  padding-top: 40px;
-}
-
-
 .sobre-titulo {
+  grid-column: 1 / -1;
   display: flex;
-
   align-items: center;
-
-  gap: 9px;
-
-  margin:
-    0 0 20px !important;
-
-  color:
-    var(--vermelho) !important;
-
-  font-size: 0.75rem !important;
-
-  font-weight: 700;
-
+  gap: 10px;
+  margin: 8px 0 4px;
+  color: white;
+  font-size: 1.2rem;
   letter-spacing: 1px;
 }
 
-
 .sobre-titulo span {
-  width: 22px;
+  display: block;
+
+  width: 25px;
   height: 3px;
+
+  flex-shrink: 0;
 
   border-radius: 10px;
 
-  background:
-    var(--vermelho);
+  background: var(--vermelho);
 }
 
+/* =========================================
+   TEXTO PRINCIPAL
+========================================= */
+
+.Texto {
+  padding-top: 10px;
+}
 
 .Texto h1 {
   margin: 0;
 
-  font-size:
-    clamp(
-      3rem,
-      5vw,
-      4.5rem
-    );
+  font-size: clamp(3rem, 5vw, 4.5rem);
 
   line-height: 0.95;
 }
 
-
 .Texto h1 span {
-  color:
-    var(--vermelho);
+  color: var(--vermelho);
 }
 
-
-.Texto > p:not(.sobre-titulo) {
+.Texto > p {
   max-width: 400px;
 
   margin-top: 30px;
@@ -116,7 +100,6 @@
   font-size: 16px;
 }
 
-
 /* =========================================
    PAINEL DE OPÇÕES
 ========================================= */
@@ -124,20 +107,14 @@
 .container-opcoes {
   padding: 25px;
 
-  border:
-    1px solid
-    var(--borda);
+  border: 1px solid var(--borda);
 
   border-radius: 16px;
 
-  background:
-    var(--card);
+  background: var(--card);
 
-  box-shadow:
-    0 15px 50px
-    rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
 }
-
 
 /* =========================================
    TÍTULO DAS ETAPAS
@@ -150,17 +127,14 @@
 
   gap: 10px;
 
-  margin:
-    10px 0 15px;
+  margin: 10px 0 15px;
 
   font-size: 15px;
 }
 
-
 .titulo-etapa:not(:first-child) {
   margin-top: 28px;
 }
-
 
 .titulo-etapa > span {
   width: 30px;
@@ -175,14 +149,12 @@
 
   border-radius: 50%;
 
-  background:
-    var(--vermelho);
+  background: var(--vermelho);
 
   color: #fff;
 
   font-size: 13px;
 }
-
 
 /* =========================================
    SERVIÇOS
@@ -191,17 +163,12 @@
 .container-servico {
   display: grid;
 
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0, 1fr)
-    );
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 12px;
 
   margin-bottom: 5px;
 }
-
 
 .cards {
   width: 100%;
@@ -212,9 +179,7 @@
 
   background: #080808;
 
-  border:
-    1px solid
-    var(--borda);
+  border: 1px solid var(--borda);
 
   border-radius: 12px;
 
@@ -230,34 +195,23 @@
     box-shadow 0.3s ease;
 }
 
-
 .cards:hover {
-  border-color:
-    var(--vermelho);
+  border-color: var(--vermelho);
 
-  transform:
-    translateY(-3px);
+  transform: translateY(-3px);
 
-  box-shadow:
-    0 8px 20px
-    rgba(229, 9, 20, 0.15);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.15);
 }
-
 
 .cards.selecionado {
-  border-color:
-    var(--vermelho);
+  border-color: var(--vermelho);
 
-  background:
-    rgba(229, 9, 20, 0.05);
+  background: rgba(229, 9, 20, 0.05);
 
   box-shadow:
-    0 0 0 1px
-    var(--vermelho),
-    0 8px 25px
-    rgba(229, 9, 20, 0.2);
+    0 0 0 1px var(--vermelho),
+    0 8px 25px rgba(229, 9, 20, 0.2);
 }
-
 
 .cards img {
   width: 45px;
@@ -266,14 +220,11 @@
   object-fit: contain;
 }
 
-
 .cards h3 {
-  margin:
-    5px 0 0;
+  margin: 5px 0 0;
 
   font-size: 14px;
 }
-
 
 /* =========================================
    SELEÇÃO DO VEÍCULO
@@ -282,15 +233,10 @@
 .container-veiculos {
   display: grid;
 
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0, 1fr)
-    );
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 10px;
 }
-
 
 .veiculo-card {
   position: relative;
@@ -305,16 +251,13 @@
 
   min-height: 68px;
 
-  padding:
-    11px 12px;
+  padding: 11px 12px;
 
-  border:
-    1px solid #303030;
+  border: 1px solid #303030;
 
   border-radius: 11px;
 
-  background:
-    #080808;
+  background: #080808;
 
   color: white;
 
@@ -328,26 +271,17 @@
     transform 0.25s ease;
 }
 
+.veiculo-card:hover:not(.indisponivel) {
+  border-color: rgba(229, 9, 20, 0.7);
 
-.veiculo-card:hover:not(
-  .indisponivel
-) {
-  border-color:
-    rgba(229, 9, 20, 0.7);
-
-  transform:
-    translateY(-2px);
+  transform: translateY(-2px);
 }
-
 
 .veiculo-card.selecionado {
-  border-color:
-    var(--vermelho);
+  border-color: var(--vermelho);
 
-  background:
-    rgba(229, 9, 20, 0.07);
+  background: rgba(229, 9, 20, 0.07);
 }
-
 
 .veiculo-icone {
   width: 42px;
@@ -362,25 +296,18 @@
 
   border-radius: 9px;
 
-  background:
-    rgba(229, 9, 20, 0.08);
+  background: rgba(229, 9, 20, 0.08);
 
-  border:
-    1px solid
-    rgba(229, 9, 20, 0.18);
+  border: 1px solid rgba(229, 9, 20, 0.18);
 }
 
-
-.veiculo-icone
-.material-symbols-outlined {
+.veiculo-icone .material-symbols-outlined {
   padding: 0;
 
-  color:
-    var(--vermelho);
+  color: var(--vermelho);
 
   font-size: 25px;
 }
-
 
 .veiculo-info {
   min-width: 0;
@@ -392,13 +319,11 @@
   gap: 3px;
 }
 
-
 .veiculo-info strong {
   color: white;
 
   font-size: 13px;
 }
-
 
 .veiculo-info span {
   color: #777;
@@ -406,12 +331,9 @@
   font-size: 10px;
 }
 
-
-.veiculo-info
-.em-breve {
+.veiculo-info .em-breve {
   color: #666;
 }
-
 
 .veiculo-check {
   position: absolute;
@@ -421,19 +343,16 @@
 
   padding: 0;
 
-  color:
-    var(--vermelho);
+  color: var(--vermelho);
 
   font-size: 16px;
 }
-
 
 .veiculo-card.indisponivel {
   opacity: 0.42;
 
   cursor: not-allowed;
 }
-
 
 /* =========================================
    COR DO VEÍCULO
@@ -446,20 +365,16 @@
 
   gap: 20px;
 
-  margin:
-    10px 0 5px;
+  margin: 10px 0 5px;
 
   padding: 15px;
 
-  border:
-    1px solid
-    var(--borda);
+  border: 1px solid var(--borda);
 
   border-radius: 12px;
 
   background: #050505;
 }
-
 
 .chroma-wrapper {
   position: relative;
@@ -473,30 +388,18 @@
 
   border-radius: 50%;
 
-  background:
-    conic-gradient(
-      red,
-      yellow,
-      lime,
-      cyan,
-      blue,
-      magenta,
-      red
-    );
+  background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
 
   box-sizing: border-box;
 }
 
-
-.chroma-wrapper
-input[type='color'] {
+.chroma-wrapper input[type='color'] {
   width: 100%;
   height: 100%;
 
   padding: 0;
 
-  border:
-    4px solid #000;
+  border: 4px solid #000;
 
   border-radius: 50%;
 
@@ -504,7 +407,6 @@ input[type='color'] {
 
   cursor: pointer;
 }
-
 
 .cor-info {
   display: flex;
@@ -514,21 +416,17 @@ input[type='color'] {
   gap: 5px;
 }
 
-
 .cor-info strong {
   font-size: 14px;
 }
-
 
 .cor-info span {
   color: #aaa;
 
   font-size: 13px;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
-
 
 /* =========================================
    PELÍCULAS
@@ -542,7 +440,6 @@ input[type='color'] {
   padding-top: 5px;
 }
 
-
 mat-button-toggle-group {
   display: flex;
 
@@ -550,49 +447,32 @@ mat-button-toggle-group {
 
   justify-content: center;
 
-  gap:
-    clamp(
-      4px,
-      2vw,
-      12px
-    );
+  gap: clamp(4px, 2vw, 12px);
 
   width: 100%;
 
   border: none !important;
 
-  background:
-    transparent !important;
+  background: transparent !important;
 }
 
-
 mat-button-toggle {
-  flex:
-    1 1 0;
+  flex: 1 1 0;
 
   min-width: 0;
 
-  border:
-    none !important;
+  border: none !important;
 
-  background:
-    transparent !important;
+  background: transparent !important;
 
-  color:
-    #fff !important;
+  color: #fff !important;
 }
 
+mat-button-toggle-group ::ng-deep .mat-button-toggle-label-content {
+  padding: 0 !important;
 
-mat-button-toggle-group
-::ng-deep
-.mat-button-toggle-label-content {
-  padding:
-    0 !important;
-
-  line-height:
-    normal !important;
+  line-height: normal !important;
 }
-
 
 .opcao-pelicula {
   display: flex;
@@ -604,59 +484,35 @@ mat-button-toggle-group
   gap: 7px;
 }
 
-
 .icone-pelicula {
-  width:
-    clamp(
-      34px,
-      11vw,
-      45px
-    );
+  width: clamp(34px, 11vw, 45px);
 
-  height:
-    clamp(
-      34px,
-      11vw,
-      45px
-    );
+  height: clamp(34px, 11vw, 45px);
 
-  border:
-    2px solid #555;
+  border: 2px solid #555;
 
   border-radius: 50%;
 
-  box-sizing:
-    border-box;
+  box-sizing: border-box;
 
-  transition:
-    0.3s;
+  transition: 0.3s;
 }
 
-
-mat-button-toggle:hover
-.icone-pelicula {
-  border-color:
-    var(--vermelho);
+mat-button-toggle:hover .icone-pelicula {
+  border-color: var(--vermelho);
 }
 
+mat-button-toggle.mat-button-toggle-checked .icone-pelicula {
+  border-color: var(--vermelho);
 
-mat-button-toggle.mat-button-toggle-checked
-.icone-pelicula {
-  border-color:
-    var(--vermelho);
-
-  box-shadow:
-    0 0 0 3px
-    rgba(229, 9, 20, 0.2);
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.2);
 }
-
 
 .opcao-pelicula span {
   color: #fff;
 
   font-size: 12px;
 }
-
 
 /* =========================================
    VISUALIZADOR
@@ -669,24 +525,14 @@ mat-button-toggle.mat-button-toggle-checked
 
   overflow: hidden;
 
-  border:
-    1px solid #292929;
+  border: 1px solid #292929;
 
   border-radius: 20px;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #252525 0%,
-      #101010 45%,
-      #050505 100%
-    );
+  background: radial-gradient(circle at center, #252525 0%, #101010 45%, #050505 100%);
 
-  box-shadow:
-    0 20px 60px
-    rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
-
 
 .visualizador-header {
   position: absolute;
@@ -711,7 +557,6 @@ mat-button-toggle.mat-button-toggle-checked
   letter-spacing: 2px;
 }
 
-
 .visualizador-identificacao {
   display: flex;
 
@@ -720,13 +565,10 @@ mat-button-toggle.mat-button-toggle-checked
   gap: 10px;
 }
 
-
 .tipo-atual {
-  padding:
-    4px 7px;
+  padding: 4px 7px;
 
-  border:
-    1px solid #333;
+  border: 1px solid #333;
 
   border-radius: 5px;
 
@@ -737,12 +579,9 @@ mat-button-toggle.mat-button-toggle-checked
   letter-spacing: 1px;
 }
 
-
 .status {
-  color:
-    var(--vermelho);
+  color: var(--vermelho);
 }
-
 
 /* =========================================
    ÁREA DO CARRO
@@ -764,7 +603,6 @@ mat-button-toggle.mat-button-toggle-checked
   overflow: hidden;
 }
 
-
 .veiculo-base {
   position: absolute;
 
@@ -781,20 +619,14 @@ mat-button-toggle.mat-button-toggle-checked
 
   height: auto;
 
-  transform:
-    translate(
-      -50%,
-      -50%
-    );
+  transform: translate(-50%, -50%);
 
   object-fit: contain;
 }
 
-
 canvas.veiculo-base {
   pointer-events: none;
 }
-
 
 .camada-vidro {
   position: absolute;
@@ -810,36 +642,24 @@ canvas.veiculo-base {
 
   height: auto;
 
-  transform:
-    translate(
-      -50%,
-      -50%
-    );
+  transform: translate(-50%, -50%);
 
   pointer-events: none;
 
-  mix-blend-mode:
-    multiply;
+  mix-blend-mode: multiply;
 
-  mask-repeat:
-    no-repeat;
+  mask-repeat: no-repeat;
 
-  mask-position:
-    center;
+  mask-position: center;
 
-  mask-size:
-    contain;
+  mask-size: contain;
 
-  -webkit-mask-repeat:
-    no-repeat;
+  -webkit-mask-repeat: no-repeat;
 
-  -webkit-mask-position:
-    center;
+  -webkit-mask-position: center;
 
-  -webkit-mask-size:
-    contain;
+  -webkit-mask-size: contain;
 }
-
 
 /* =========================================
    MENSAGEM INICIAL
@@ -855,7 +675,6 @@ canvas.veiculo-base {
   color: #777;
 }
 
-
 .mensagem-icone {
   width: 75px;
   height: 75px;
@@ -865,28 +684,22 @@ canvas.veiculo-base {
   align-items: center;
   justify-content: center;
 
-  margin:
-    0 auto 15px;
+  margin: 0 auto 15px;
 
-  border:
-    1px solid #333;
+  border: 1px solid #333;
 
   border-radius: 50%;
 
-  background:
-    rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
-
-.mensagem-icone
-.material-symbols-outlined {
+.mensagem-icone .material-symbols-outlined {
   padding: 0;
 
   color: #555;
 
   font-size: 38px;
 }
-
 
 .mensagem-visualizador strong {
   display: block;
@@ -896,7 +709,6 @@ canvas.veiculo-base {
   font-size: 15px;
 }
 
-
 .mensagem-visualizador p {
   margin-top: 7px;
 
@@ -904,7 +716,6 @@ canvas.veiculo-base {
 
   font-size: 12px;
 }
-
 
 /* =========================================
    FOOTER DO VISUALIZADOR
@@ -919,69 +730,59 @@ canvas.veiculo-base {
 
   z-index: 20;
 
-  padding:
-    35px 18px 18px;
+  padding: 35px 18px 18px;
 
   text-align: center;
 
-  background:
-    linear-gradient(
-      transparent,
-      rgba(0, 0, 0, 0.92)
-    );
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.92));
 
   color: #aaa;
 
   font-size: 12px;
 }
 
-
 /* =========================================
    TABLET
 ========================================= */
 
 @media (max-width: 1200px) {
-
   .container-pai {
     grid-template-columns:
       1fr
       1.5fr;
 
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 18px;
   }
 
+  .sobre-titulo {
+    grid-column: 1 / -1;
+  }
 
   .Texto {
-    grid-column:
-      1 / -1;
+    grid-column: 1 / -1;
 
     padding-top: 0;
   }
 
-
-  .Texto > p:not(.sobre-titulo) {
+  .Texto > p {
     max-width: 700px;
   }
-
 
   .visualizador {
     min-height: 500px;
   }
 
-
   .area-veiculo {
     min-height: 500px;
   }
-
 }
-
 
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 800px) {
-
   .container-pai {
     display: flex;
 
@@ -989,59 +790,38 @@ canvas.veiculo-base {
 
     gap: 25px;
 
-    padding:
-      35px 14px
-      50px;
+    padding: 20px 14px 50px;
   }
 
+   .sobre-titulo {
+    width: 100%;
 
-  .Texto h1 {
-    font-size:
-      clamp(
-        2.8rem,
-        13vw,
-        3.6rem
-      );
-  }
+    margin: 5px 0 -3px;
 
-
-  .Texto > p:not(.sobre-titulo) {
-    margin-top: 22px;
-
-    font-size: 14px;
+    font-size: 1rem;
   }
 
 
   .container-opcoes {
     width: 100%;
 
-    padding:
-      20px 16px;
+    padding: 20px 16px;
   }
-
 
   .container-veiculos {
-    grid-template-columns:
-      repeat(
-        2,
-        minmax(0, 1fr)
-      );
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 
   .veiculo-card {
     min-height: 65px;
 
-    padding:
-      10px;
+    padding: 10px;
   }
-
 
   .veiculo-icone {
     width: 38px;
     height: 38px;
   }
-
 
   .visualizador {
     width: 100%;
@@ -1049,85 +829,66 @@ canvas.veiculo-base {
     min-height: 400px;
   }
 
-
   .area-veiculo {
     min-height: 400px;
   }
-
 
   .veiculo-base,
   .camada-vidro {
     width: 96%;
   }
-
 }
-
 
 /* =========================================
    CELULARES PEQUENOS
 ========================================= */
 
 @media (max-width: 420px) {
-
   .container-servico {
     gap: 8px;
   }
-
 
   .cards {
     min-height: 90px;
   }
 
-
   .container-veiculos {
     gap: 8px;
   }
 
-
   .veiculo-card {
     gap: 7px;
 
-    padding:
-      8px;
+    padding: 8px;
   }
-
 
   .veiculo-icone {
     width: 34px;
     height: 34px;
   }
 
-
-  .veiculo-icone
-  .material-symbols-outlined {
+  .veiculo-icone .material-symbols-outlined {
     font-size: 21px;
   }
-
 
   .veiculo-info strong {
     font-size: 11px;
   }
 
-
   .visualizador {
     min-height: 350px;
   }
 
-
   .area-veiculo {
     min-height: 350px;
   }
-
 }
-
 
 /* evita efeito de hover em dispositivos touch */
 
 @media (hover: none) {
-
   .cards:hover,
   .veiculo-card:hover {
     transform: none;
   }
-
 }

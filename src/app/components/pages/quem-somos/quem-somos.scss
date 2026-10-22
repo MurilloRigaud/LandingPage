@@ -4,7 +4,7 @@
 
   color: white;
 
-  padding: clamp(32px, 5vw, 70px) 20px;
+  padding: 24px 20px 70px;
 }
 
 .quem-somos-container {
@@ -32,26 +32,23 @@
 
 .topo-conteudo {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  gap: 20px;
+  justify-content: flex-end;
 
   margin-bottom: 20px;
 }
-
 .mini-titulo {
   display: flex;
   align-items: center;
 
   gap: 10px;
 
-  margin: 0;
-
-  font-size: 0.9rem;
-  font-weight: 600;
+  margin: 8px 0 18px;
 
   color: white;
+
+  font-size: 1.2rem;
+  
 
   span {
     display: block;
@@ -409,19 +406,19 @@
 
 @media (max-width: 700px) {
   .quem-somos-page {
-    padding: 28px 16px 40px;
+    padding: 20px 16px 40px;
   }
 
-  .hero-quem-somos {
-    gap: 30px;
+  .mini-titulo {
+    margin: 5px 0 22px;
+
+    font-size: 1rem;
   }
 
   .topo-conteudo {
-    flex-direction: column;
+    justify-content: flex-start;
 
-    align-items: flex-start;
-
-    gap: 15px;
+    margin-bottom: 18px;
   }
 
   .experiencia {
@@ -429,6 +426,7 @@
 
     justify-content: flex-start;
   }
+
 
   .conteudo h1 {
     font-size: clamp(2rem, 10vw, 3rem);

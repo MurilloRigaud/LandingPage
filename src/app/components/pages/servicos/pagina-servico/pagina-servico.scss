@@ -6,8 +6,11 @@
 h1 {
   font-size: clamp(1.8em, 6vw, 3.4em);
   line-height: 1.15;
+  color: white;
 }
-
+h3{
+  color: white;
+}
 .header {
   display: flex;
   flex-direction: column;

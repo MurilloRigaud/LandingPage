@@ -18,6 +18,7 @@
   </button>
 
   <nav [class.aberto]="menuAberto()">
+    <a routerLink="/" (click)="fecharMenu()">Inicio</a>
 
     <a routerLink="/quem-somos" (click)="fecharMenu()">Quem Somos</a>
 
@@ -27,6 +28,7 @@
 
     <a routerLink="/avaliacoes" (click)="fecharMenu()">Avaliações</a>
 
-    <a routerLink="/contato" (click)="fecharMenu()">Contato</a>
+    <a routerLink="/contato" (click)="fecharMenu()">Contatos</a>
+
   </nav>
 </div>

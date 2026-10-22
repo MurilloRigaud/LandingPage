@@ -132,7 +132,7 @@ export class Simulador implements OnDestroy {
         ALTERAR se a imagem do Sedan tiver
         outra proporção.
       */
-      proporcao: '1672 / 941',
+      proporcao: '1689 / 949',
 
       disponivel: true,
     },
@@ -165,7 +165,7 @@ export class Simulador implements OnDestroy {
       /*
         ALTERAR caso necessário.
       */
-      proporcao: '1689 / 931',
+      proporcao: '1685 / 949',
 
       disponivel: true,
     },
